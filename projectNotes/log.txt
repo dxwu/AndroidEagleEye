@@ -1,0 +1,276 @@
+instrumenting uid 10084
+--------- beginning of /dev/log/system
+--------- beginning of /dev/log/main
+I/EagleEye(32722): {"Basic":["10084","0","false"], 
+I/EagleEye(32722): 
+I/EagleEye(32722): 	"InvokeApi":{"libcore.io.IoBridge->open":{"path":"/proc/meminfo", "flags":"0"}, "return":{"java.io.FileDescriptor":"FileDescriptor[102]"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"java.lang.Runtime->loadLibrary":{"library":"eagleeyenative", "loader":"dalvik.system.PathClassLoader[DexPathList[[zip file "/data/app/edu.dartmouth.dwu.myxposedmodule-1.apk"],nativeLibraryDirectories=[/vendor/lib, /system/lib]]]"}, "return":{"null":"null"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"libcore.io.IoBridge->open":{"path":"/data/data/com.workpail.inkpad.notepad.notes/shared_prefs/notes_preferences.xml", "flags":"0"}, "return":{"java.io.FileDescriptor":"FileDescriptor[45]"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"libcore.io.IoBridge->open":{"path":"/data/data/com.google.android.gms/shared_prefs/google_ads_flags.xml", "flags":"0"}, "return":{"java.io.FileDescriptor":"FileDescriptor[56]"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage": {"operation": "keyalgo", "key": "-10, 50, 25, 120, -94, -100, -33, -42, -87, 104, -92, -8, -77, 90, -104, -16", "algorithm": "AES"}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"libcore.io.IoBridge->open":{"path":"/data/data/com.workpail.inkpad.notepad.notes/shared_prefs/admob.xml", "flags":"0"}, "return":{"java.io.FileDescriptor":"FileDescriptor[56]"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage":{"plaintext":"504b0304140008080800aa785a46000000000000000000000000090004004d4554412d494e462ffeca00000300504b0708000000000200000000000000504b0304140008080800aa785a46000000000000000000000000140000004d4554412d494e462f4d414e49464553542e4d46f34dcccb4c4b2d2ed10d4b2d2acecccfb35230d433e0e5722e4a4d2c494dd175aa040998eb19c49b9b2a68f8172526e7a42a38e71715e417259600956bf272f1720100504b0708d537ccf64300000044000000504b0304140008080800aa785a460000000000000000000000000b000000636c61737365732e646578cd9a6b705bc775c7cf5ebc4148042f448aa4281104f500658aa0f8d0c3d48b2f5994294a2129da92ecc897c025080bbc00f1a0283f1a295253d5b513c7511ba7559bb47133f9e076d271dcc94c3d9e7cc8346ed36632e34e6b4f9d57a76d14d74e93266e62c763f57ff62ea82b4b14fba953727e386777cfeeddc739bb7b49a4ccc56067772f7da9fefde19f7dae3bf75e7270fe9d","encrypttext":"e5822e75e079701fd8719c5776defc6b4112fa3015235296e86c61af295552303da57e34491121a02a018a77723d7a8da678f05bcb571c82c782dea6a9d447787389c420a57241ce9ea843eafa2e4a5d8c4caedd2a6628519d7985144dd092887e22052c79111bcebba4909a9a36d55993f26cc45ce415aace8fcbe6604ffe914aa83997a978ec1ad7be8aca83546dde7fc5e581d5fc34cdba7ee14441d75bff92c33ca0465fcf6f3623fe8347b40b818930377941f4f6ea41f2431a11234fd8d2c4a70b0c76aa6fb5d3b6f900232f0f85d60721d958eb235c43fbef0703b674ad8923159bc3dc6520c3de7cbab8a8fb4bd599aca5a6a0be50f0f76721193fce09b11c38ac61b93173f8a066f38e3f0ecaa825333da2b2d427678f18dbca93c7a4471cf9d5ab619a274f11f6f62d3ed9b220a9d3a9a52ac9c9247066bcb35a2bc451154d729ab44f338748ba6aefe0760d23895100739243550a1d1811c328f88657951f48fbb567557231941332fc4d05042e44bbaa7559dccdd13ef4dad3c7", "operation":"decrypt","algorithm":"AES/CBC/PKCS5Padding","id":"1174085986" }}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage":{"plaintext":"47aeff693c56feebbf7cf053ff148d11e5896871aa4727f5f3640bd17364e70f72868ba80722e4265a05f99897e838e4bf4256b17d00e56b89de0a12bd574b24ea887c2002b6805eb01fdc03c6c071f020780824411a9c017950040be051f03170115c064f81cf8057c08f4008cf4b80c320052e812f811f026f3dd166702fc882cbe02af83af83ef8258834106d07e3a008ae8017c13f825f82fa46a2dde02478145c05cf836f82ef819f81da75181f380cb2e03cf83c78017c1bbc0be24d4443e0015004cf8097c0abe0c7e0d7a0663d512bd809ee05c7c009f010c88039900725700e3c0e2e824f8027c027c133e005f04df006f83ef831f809a8dd40d402da403be8057bc0303802ee03a7411ae4c022781c5c06cf80e7c0d7c0b7c06be0dfc1cf013563fdc15ab005dc0d0e83695000e7c1b3e08be045f032f806f85bf02af821781bbc03ae035f9468356800cd200e7ac10038044e0203cc8132380f9e029f05cf813f032f8297c1b7c0ab002e297db41ac035084b4f585ec2f2119687","encrypttext":"946f61ed5d1e50bd619b753fd74ed118969d5895252ae8529a489ebdad4e46fa2ea5ad71716bfd63b7ece938724501aae23a61fcc1b5057b251ea13cc4c2920b3d23b5cbf601cf4830ee1d99bfb18f1970c202740e980640181cf21e431aa5f216a37ea07cf9a7e416aa7c9b41e50a2c9cbaecb6f8d49082d2f5f337c7d740a9e982548a0fd8c521ba20451bb79fa51c4775e361dd915b80de9660922a1c2f9f86101302bec61e5a815e125816192df2656f3de489c0b17f3758f26d43d296656118b7130954864fd878d7b053b539dfe486491367970fee3233c4371707858e286076bba603de52a1a58b999abd10be096a0210d439a8ecfd2e7fb3406d31b32b291ccb642ac136a7dedae0d87a5401f277d9d233bff12feabc9822d60f241433286d13451a2f9d3814d1a94435b201c3ae40ac9b1fed2f1949ae44606b9f60d7f521d1096e7871cdb99561e17332ac1e60b94e16138639db6e9a029601a88e5eccdef71208dd0bf7fc87dd373d50c1a75ff600df0cbdb87ce8a165f9c83724", "operation":"decrypt","algorithm":"AES/CBC/PKCS5Padding","id":"1174085986" }}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage":{"plaintext":"30fd842922351c421582fb13c2825ac146b0096c065b401cb481ade02ed00eb6810e90009d603be802dd64c74d2fd80176825d6037b81bf4813d602fd807f68303a01f0ca8d81b02c3e020b8071c0223e030b8178c8223600c1c253b2e4f8207c083e0a3e0347888ecb9a8fcf09c08a58794fe40ad1ddfaca7a0af567ad6915faab5e7525375c3c0ab7414911f3c06658d7a1ed70dab6754ec573bf46a87bec6a16f51baaef44baa9dad8e67b1fe249488d2af289b766553a3f4abb5b63debcf29fb7635c68afebc43bfe2d0bf0abd4ee92fa9fc6dca86dbe4f57e45e57739daec5273c57ab7a3cd5e6553abf4efa83eef708c7da743dfe5d0772b9dd7788fd2a794ce6b779fd25f73e83f807ebfd2af3974eecf09a5ffb4d6f699bdaacd534a67fb8afebceae73e651351fab5da1b7a65bcfbd5185df098df2196ed7485d81f0ed0b3c4eb2fe833724cedf411b94eede453d2af64403de36129053da1e41f13c76e3b19c43174374d42ba11a117217df82d4b19a4df9032421f9332441f9752","encrypttext":"6040e7cf9fd6896bf429d668940562aed2354013e146ffb05e9cac201c1858832fe99afcf196adb857e55e12fd488953f76cd2aeb9ed3cea96b5a094f35addc2401b4622362950021fc8449ddbb53d4c6fe5b545504c78aff9398f2e4e6b95f911922d3220c32448ba002807d3a60d8fc01691656450ca849008e99aed75a2446a43523c221c5122fcd26b26cba93020840a5839d0cc3936bd1268321612dbff39e9638ff73c481cd30974b443484d484c8861e341fe76af234beb92624e5a8bb7a8d98f86b53201e55828a799c8eaeb0a60b777d28f40873bebcebb94266420073d147fe2641fa77386dd335cf2f48914ce719f492411fc8bb474c1e78b00a696534ce44c141d17924a3b4a28b05ae274e6a29524bb8400c4c7938506e3aeae7dd2373b7eac48abeb12e50ef2a0877afce91cbeb7047b5b1fc8df11b5021433aaa6e79a6d9ede1a0679aeee23c763977571f3aa20ce312debf06960d16d2dd79cda8421dda81fdffe423d4600b0fc2d4267f96bb429aee5fae145b11991e7b2", "operation":"decrypt","algorithm":"AES/CBC/PKCS5Padding","id":"1174085986" }}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage":{"plaintext":"a7df94d24fbf47ecab6e7a04328048661f0e417b9cd8d73be90f887db38a4ac43e584b97e4f3374bbb5af4a320a597ce2ab948f69afe96929789fd66152d10ef3b76bdb59809ee77bd4ad7c33338dda0d20d9819438e6f337994f44a59a7f2eb95dc26e53a55be0e3b989dee50723ba589f736bbbc493d77bd4aafc74838bd41a53760d7e374b34a37abf6a22a1d55fd6a51e916fc723aa6e62d86fecc2a6911ef9b5b657e2bec33527ae87789f7d1267a94389ebdf4b494d5f405e2d8b5db6dc70e3a276523e5a4eca4a294823e29e51afa7d291be80fa55c2beb6f932db25c47335246e82a716cd6d093c4fb719b2cefc248bf481c8f9d7446ca2e259be99c94edf479e2b8b4dbebc56e9f248e4d8de6a58c49bb1d18d12788e3d42be52e3cf1b7a50cd3a789e374233d45bcbfdbe3ea43fd67c83e7f04ddd8c3aee387e5eb513b5dbf4cf98f5479c332e5efa8f2c665ca5d2d767add32e52daabc6999f29daa7cfd32e5c3aa7cc332e513aabc7999724395479729cfa9f29665ca1f57e542","encrypttext":"ec7b2ad109212c17481a05b6e6e6e305638d80f1b866ee763c066a9bc5a8821511510635be253d11202744b96150807e54af9b8023f612d7ae3ee2772a85e5487fc5e34cafc315e3c2f991f42b2ac76ee138cf1f67b771470d97111590c0585054f5680de1fe577d8f1a1ff05c942317252af5bd3a74e08082e6e783e3b8b8c5e1e563a24daf484adca1fe31f9c221a6766fc293fc753ab7bd2d6f71409673a05e0f64313a42e6780fb393dfd619eb132d6cf6ca8ef318b92629e0462a5d510319d36c75e439d636528577c05e31e2c52af3b0712e18f6cc7c0478c703c08fe7e859fafb27ca4df424fe93fa6af044b495f67f9a1f6cf04f8a952107e1675ad59b68467d18b988d5476d73d726b09d16edb2046980d2e90485d0ac12bfe17206394b9b8c0b4642044e3d05d45d9cf27e5399d31bd531ffe10261475f44fc142f6c3946f35009e8d17e80f206158d69c57ad9c9bc86c758a88ed6ea40c3fd80910dceac3b99cdc2d23636116e0810ede6e4da533ea9ce8149a2c4ca28911fcf04", "operation":"decrypt","algorithm":"AES/CBC/PKCS5Padding","id":"1174085986" }}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage":{"plaintext":"feda3fb8aa523eccbbe76aac81583aaff88cd4851576c127435a234d9315f5b08edeb9c9e22d0e7a213cced255081f43ec04b1b23dc8fb0874b673d1a45ba0de6e9cd241f72ef74fae8fa3f9882b455d5d7ee29a11ed15ea8ed6921e8e893ef463023d886807506712a3088ad78410bbb00f7d8f44b81ac4dffe2e89ff8cff1adab5e5c71140ae4be5f379afb7e82e5dd77fa153cc13a0466f8af2513f9964757ac9ef09791ae973d07de4d18288543ec14467a3f75332cf7407bd8dbecf4abdec0e7aba0e5653d7f02aba387371f2cfdd5e7783f7c481bf4f3d31f486c7edf98bc9d69afdb86d08d7bd6ea1d508f4f2bb221aff67bd33fe3a09b79c5bbe1fc5155befb016ac57d682cffb79797b0961e6c794e415aaa23aed9aebe5e87c7427622a8438aeb455694fc7ce52254f92e59ec36b6e97ec90f6d3a28a768b4e3c816731241a3593e6a321ac4748ec127ef484fd37a8edd26aa85164693ebc1ef54362b7588de7af123e117f5b7ebe592989ff7c9a7b1cddc729d99f69107f93f76e","encrypttext":"856aa51066a89e662a26e98404a8310a086990e61b575d067b6c116641e051dfbba279a516fcb679b5fe9064d1f4c2376595278ecbf63c9fae6a096e8fe33946792f5486d8f87529c799ce83c2221a3823133485a9fe732480762209274d7e74d10dfb5e2e15516940932186f4b8d986d302553b217977784c23f77d58597a3621f01c100ab67a18075547d53593d40f036e45b06f187bb7900adfec6e3cbcce7dd6c633b5a271755ac8c6c494176c4e1b286691836ba0086c1e44e80af2d7e5b4aafdd263401783e809d96ae96ef5fef7adfec8eccc30a00f715bd9b7097293ccc76566a228989f5b0cfbafdb326c7524c572d58492fb52ea5ce781ec95c6ca437817c3a6554c82f4134939358034f74e5ee10e60d38f38391b8d60ff975e91f093432786fcbd5a496ad9d8c9eb843110c6547bbc30e877484249889a515154f36e22e466cf7b321f45c20c969d00a67e0c583573c7bf45307164df1084fa7e1590ab58c381f13902aed1f9b0b66656083ec08b37977a9083fb382a0b659066", "operation":"decrypt","algorithm":"AES/CBC/PKCS5Padding","id":"1174085986" }}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage":{"plaintext":"5e2ba1b5453b5a793442f6877ff84e17094449f7ebb42bd885deec817f05c55e815d4f1cc3530fc9b6ad701ff2439aee52166eebc008b50c4e6b216a8413e86b5a870648f7c4bcdb495f6b850fca5af9ce215a1047bc6ecf7ce7ddd4e50ec99e579ed1f3e9f7ae5b9d7be9894088e2bfb0ef646ddc4fd1b35373ac0bdf7da711138de28fa497876504d423cf87bcbc236f35f2bc1fca73c3ebab31dff10feeecc7b6274761a06b4db2e5f3a4bb5abbfbe193bd14768510a7ad3503480dd279c171d74e3111838f27507f3edc82cf20f65a37de1b6ac8179e0fc7a407cd8787a58cfff72ae238f7635e621853a30bbb78783fafbdabd12da4eec63b6dccb3ad92efe599f252d0fb9ad72bf330a73ecec38dc2f7950555c391938f1ee0788bf6e3ac08b95846941c64191e904fe31e77ca1ec3bf5cbb5dcf5fb7fbe3fa7fd29f94ea8ffbffa63f8265bff4f101db6bd19f70a53f88b7a6ebbe681badbdbe8a584694ac56b24a499f92aeebec634d6889dfd77c3865f97efe3aee5e2e77bc7df393","encrypttext":"9973bd0cc85eb1149568491308251fb16421e3235931ea45c3753fe68a9efe4b67456b50866a3861074101975ba820a9173aea1c2ee7d720db3fd8e7decfc09157b8583dd639e10cbc3f65dacd5f21b3123c60cf0ca509f367eb36a1d266712a0d0e6e2c8a975fa206498d00bd0576f15e4e0ab695725405ba27f79023eaf180b39c9ced16599a417c3acbf4abf10a7ea49be8d28bcf1ce612147c6be3363bc196e5c02c2dc711cc6822f0635ec7f3313b7a935888a41759992c893e9ab87dcc6a1ee71d7c624955a815e1a6f3243dd8b35acfbdc80b17e2d4c1444f80697bc68e675449d87f8d4dc23ca53be11166135dbbf4f444e4bef6671e967bbbe3971dad112962758fae0d55fa19a623a12f8427d053cf7c08c4fd126b7198776be0b14aa847f65517f8461ea3def355bb8e6b6b6c2eec163ad4ee5d3534a047dac104d17a3e5f0289ad1694410ac9f1b7b183110d73e78d64f8859060033b54b8bf58a434b2e5ab42a067e764827174d965a8ac6700812e1758e7fc10521b9603da3c", "operation":"decrypt","algorithm":"AES/CBC/PKCS5Padding","id":"1174085986" }}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage":{"plaintext":"5ae269ade38ae65ad2b49e67b58d5735fb7e5af1d01ab94758e1ed888220f68300f44ea5bba447af12f10fecf347c6b6b8abda2be3da8e1a7ecfd335dc58b556d73e9cc4133292f96f2631d10a9fedc24dd78af6e02e1224fdbfbaa255b0e688eed12ab9f17776090f9eda8d56399edd72dfc3185b6ee46f413afe2ebfbb7990b2dfa55ce8c156f9beb15cbcb91cf9516085b9d7bcd756c94819e711fef42e61bf276357ff400fc7df8f607f8ebf8b4d5fd6f5aa36fd77788e738f76c93dc42de77539fba0631f48cbf98b895ed2a3f9e86194c45c11586215319b7f224fe9803c7deb701247e4cc36a1878d9e0ba4d7b5cef493ee6bf247e888dfebe3fde39817fb476deb71ec91de232e8f977791031e9dc67b82746188cf9549b46075e25473ebe1f1ee005de851b92e99ebf28579f6ed673cb6ec33e2df662f8cff87fcbc263fff4d7efe0bc9771ade13ebe5bc0af977834ea435777ca4e3d466239172779c8a7f949565e7c823e7c82ee9523eaab16fc83b0ca41671e15ed119a0165748","encrypttext":"d31114eaf5282df7c6560df40a8c359ee41975d6c08635e3edffa285aef1255eb1ca297f46ae0a5818b2af25c124925ff7d343b9665356f246244f60e1e5836d7021944503e7739cb6a97f31da55feef6242f28bdc9de61e0f4f1ca8f61c8ce7389fe38207a775f0060b6f2afdc918e23d7d6d3e84e5759ea70c9122dc975a6e1c166aa6d7535429db526c8f9fb57b591320db112e139290203be5362f3f667958a7c40b24433b1f9f8720128b3a6641e66696e29c37a79df66e24cfe2c24688a9a306f43ee763c4dc04a37aaea772ca0c591ead24d695bdc562901906e83a1472a44aa5fcc395a3fc5f37cb921e18911d9395a113701961afcd166662ecc6e6c02ff07201ebbca48d235618a22c44736e98ee04828ff09afe1ffd6bbc5c6e8ff094e1f236d5eaed96abe6553d274d2b30827b4b5dcfed316352a9cbbf6234871d883dc83f675e935f71c751290ea4b1799a46b9bc0e8e4581343fffc509d9f62d75e92e2eee77ce425b2f071289bc0c6439cac2732926d66ee7cb1dda38f876", "operation":"decrypt","algorithm":"AES/CBC/PKCS5Padding","id":"1174085986" }}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage":{"plaintext":"4cea1ab5c4f66a0dd4a88d4b0fc43a6b93351a76d68342600708daa74bf41eb41412bc570adbcfe0dde07df09ea89c0bae9eceaa8e8ef6ffcd59cee77fe52c8f886aacd7288f5d44b4b0d4a318f757c26bc4436f12bd10be409593dd0af3e9cce7fd173c7f75d3797ffb67faf1c4ca1d88df39f53531ec2dfa76f699b0bcd9d5f00ea58d17fdf4375d9763dc6217e680d734ac59619d4bc57801a52d9775552ab8f400eaae96a5ddfd11dcadac7018a92ad4a966e97e69e0e6b6ec3b49059f9a8b76d5ef7d2aed91bb85ad335b6940a6db555aa8bba957d6acdc9decbf0fb9a46c977f0bb2dbee97b216bba85d77ab92fb649d98aab34fb6ead9d4d9dd753fb93b8cfc190a265246c94818f97c82f425fd74be9059304a66824289e2b962c99cb32dfc7b92d98c9529ed23ef1e5b7a068ef68f0f418cf78f0d917768786a6410ae835bc7086923cc28b9464647482074a18e72dee861c009e4e36394dca3fcd93d6a58a9422e93920feb4f96320b99d2b9238665a4cdc2c6f1b26565ac747f3e","encrypttext":"4d850a6d5c501ada7df962abae9b55205730bbbd74dc678fedb4ea2927072dddae21ebfb282e82d2e214976063e20e8102772d894d7e1508fd118ecf007941c8b28d46d39ad5d1ec5702f7baf21b853a41ae924e836332375bf984a90fe0fa988b99fcf468d4fbcefeae1c85ce360544f15525c8c03aab7891b9e41ba206591f91b21de2bdcd16fb6d410fee84bea5f552c1f0217eee61cc2de37346ace54d8d55a37ac322c422372fd66dedade29a6e9d894f3295cf5a2ef1e7e5ae2f3b4c927381be1cfa89b30fbe2cf0e7a8dba1962490f8b99cd104d247f9c1b270fc623a87c26f58be7292348ff8dfecb8878d9ecad5b826b5a9bb1bba1f71559abbfb2157707882f39821ba58a5e76aa8bae1068bc05a2809fee3fc51dd12fc07571513986986866d282eac656d62d2e153bd7242c06e4998409eec189cbaf18ba26a8fd9c04db242ab9f7b05ef05ca8d2b088423b71ea1f78e6bda8ee338911f001193ca1c4e3bf21fb7f0b4c15b3e6606f617ba96369b4d507d348e2af15ee1d94a45", "operation":"decrypt","algorithm":"AES/CBC/PKCS5Padding","id":"1174085986" }}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"android.provider.Settings.Secure->getString":{"resolver":"android.app.ContextImpl$ApplicationContentResolver@41f8b3d0", "name":"android_id"}, "return":{"java.lang.String":"8c035791bde91ecb"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"android.provider.Settings.Secure->getString":{"resolver":"android.app.ContextImpl$ApplicationContentResolver@41f8b3d0", "name":"android_id"}, "return":{"java.lang.String":"8c035791bde91ecb"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage":{"plaintext":"7fac904b9ac5e2883593eba3f577aad447ad4bc5c99c5532ad5262a090335249a3581a37936666818d5a6e311ab4e5b859cc65a549c3ed4d164b7d547f4bd188147db461999283996c891b8dde529e9f4b1c339267d0777b74bbef605199983163ce1ccb950ee6ca566a783169e64b999c75bb91df52f5763d84d144266d19a572c1bc5d2305b3c8439fc9a4cb05c37e52f36d8d78eeca052c541f352e19e48a898172269bda38353c3e317274ac8ff45bcafa28b694972fe4163229b39098304b25ac7e71e38499943dbbb1eee552269b18ca14f359e3dc11b354c824f1c8baa5e2858c79b652ecec8acc3f92e3210c2fc8e56abab9ecbe8c95ca9d5d9aaae6d1646e2e91cee5d25933b1e473a962e291c5c54712c64a06d32b1924573248ad6460ae6430b392417a2583d9950c322b193cbc92c1993e5a3dfab0b1602432b90422c5e4e073a647ac7cb934512a98c65c1fd52e158d1c75387f8d9d9d35ac7462306b148bec5437b246b259336d64fb93bc8f38aa851d36a3392bcd5bc38d9c","encrypttext":"1ec36a6431ee16df7c3787afcd3e9c21cf8a2c2fdae9c4e991b0a2e60f70795e220d6ced14d1ff2b697a93d2cbd701f1461ff817d5bd11e739d078af8c62e4cd1c34879a34eb023e90458dc19b82fc7224b098bdb7443dcfaef62cb28b4b181749c781bdc0adf1404b69c9e976887bb3bcbeb486684ed53fd94c71ab72eb542095143c9e88f3946be524d91e000e757ced3f6039f8b532e1a0749e86fa98b2d661237e615cbdf4fea6812790b50a950e88e619374bf3fe9d4e330d4277086388349517c422e21e650fb855694fc919a79e5dcdc847d4f34e95ba9796378d85986522bc39e2793aa253e9540c09b83a73b76125e6f039a95f0c9b4aaede4b045ff078ceb3cf94f8a69d7ed380a8adb1a160f6cde4b4ad99768f604dbec2dba6ec724f01f8a6db12c565b816747d2beac0e008975ea944e418496c7035188f5636db0992bee75e835176c297c821aad79b9fe0b8562324f78b9e1cbd45890c7edb30831677ae118f83a4cd6065ee1847da75179d51631c19678d0da3adea5cacd8", "operation":"decrypt","algorithm":"AES/CBC/PKCS5Padding","id":"1174085986" }}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"libcore.io.IoBridge->open":{"path":"/data/data/com.workpail.inkpad.notepad.notes/files/.flurryagent.-6adc82f4", "flags":"0"}, "return":{"java.io.FileDescriptor":"FileDescriptor[94]"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage":{"plaintext":"b1dc4439390b179bcd39032dea342967b3c772194441c161a13b2c8e4e3f6c264becbf37f2a44f63d75aa60ac69ae1be34dc9227e3859db3cd5174dc2a96f3f95ca164a68ee64d3b481d2d6f739816cc992c7a836d69219794869346216d961ce68db731b7a780834c96cd19a5d9c44026cd9b9b0c15b528165665e05cc91c28cfcc70b61a72518d16cd148b88ada14cda2c6246e21f2ab6a7bb3f9bce21393be7e8936a5f067e7fa1609c1bcd70036b1cd98346d6b4524661694ded5d0267dacd7623259ea1dc87ececf674670ee6875dd199370edfcdc1075d47867ac9373e3c3adc3f314c9e8943fddbb6938f4557ef0ed28e4f9098226d0a67dd144e436d0ae7dd149f83e224692791716a008c50f3a9153663fdd4ad5e1d39751bdf1206f90d751292cb48a568936ab923231beee0d29cd531d03f39393c7ee2f4e0a1feb17b868728a8cc4e6752e4c5798a292481b7fba4618d9b468a3cc96cae68922f655a456edb9b926b477e73ae9ce56924af395f36b245c845cc21e44cae00ff20","encrypttext":"2b14b98896f8d2792d04e53c8b5bfa6188dacbb072375c2ada6d49e2f7371007c3d87f96c0262d5d22a4cd6286f8e9c98188fa4c5db216927c6b83b2424561cc31f9bfb91257e3382e0bfee5290b625b58ec56890da7e4c90a1e1244617b9b55e9b5acb67f5a3c5709be870c38a08b28ea53cbdcb17e5a982062bcea5dab60d21bbc0e117e6c0cd1c5a1fc77da3d8279db5aff3e5faecfef3e683e36a9c5ce92d16be5f71c97bd3dd3c83b0f1b2dbbd0c38c3605ea8a99bef6dc2d2541941d950ba32504b6078e1ba6d09b31b7cf3407ba4ec580c5fafe0d7927023d1cc4603a0b14a4a86518cf651c7fd5e9b3dc35a06a9ceffd66cd1f5acf2237c60f6fd0c3f8cd821551ece8ecdad86e261cd963ee48930c7cf099995ea38465c29e833f93c27c94aefb61a3641eb7e3554c3e14b98db91ab94c2bc6a9316447d28e4a27da96997a85e7ab288939f67e56b7f4b0a577e4a1599537ffb39a3ddfa2a436f889e55fe3fb62dc5aa169e97f2a6d1439155e62570ef5b3a01c247acdb130a2b8c9", "operation":"decrypt","algorithm":"AES/CBC/PKCS5Padding","id":"1174085986" }}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"android.location.LocationManager->getLastKnownLocation":{"provider":"network"}, "return":{"null":"null"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage":{"plaintext":"5fdab44c6ccde4827b51001ffdb20be487ca4e52a430b49b4e16d2ed1ce7494c35c81b32678c72b6a43675aae2acdc596b3233675288dd97f77399e2a211ab5832ac642501e72e150cd905db8f2968ab7c70d06ae88e13583eeee643d369c2472fd5dd4857cebc638808698759cb569a0ec9b43a1465ad5bae34c8e77ed9c12d276442debe26ccc2420623c02cdae37243b95f7e9e20dfac511cc34d8442b366263d5b3a965934b102c1cc1c6f0272e4de0c02fc8c49fe8c7277f2223cd2e8a4276b2e98590a64b1db4d19d9329ab6b82d1f7f62b2a80ad187d9b417a42a6ff7538edb5d60970817cc3456da2c54ae53e42972a850b058f15c780156a054c6e08ae5e9a23db8aa528e975d862ff94bb989a5ece3f0bbc2a0c17e56b6ce585858f296f3b89a226381bb787486aace6652a5593552ef59795293fb6cc1c8cb2bf19a0be7dd6fd58ac0a53a4ed521f5d5b522f0776b39558fd4afea45e0e9065c85a92ad878f9bcfb950681dc1f3488c0afc0a57522f8e5267ebd6846eefb4d2270","encrypttext":"5f001152fa7df4201a51bce972b791018ea40121fe3c2e781f6f90233648f6c5dfba5bd7db11e64fafe4fd819e099252d98d42753cb99ef13292a12a70da544a3b9d1ba8f3cd65cff74c1352ea4e1072348ef8a42b42f5ceec7de0f5b02c3e7051cd880e5b38cd0461ea293f076b9b15354ca16ce8a2f915547ca69d902600594ab532437e81dd5cd7a0cc9860e7ca5fa288538f1a440d989d0f0190385ab0bc446b27bb9d146fc6e0ac291372cd28e775f29a70312703b06892d0cc52b3b61e4aca9f938e76656300ec843f1dabbdcb6010990e31e0e727996eed6c7e71475a5752b25ecbe9fc701cab9ccea0ba191de25c260e1804c43b4f906cbf159a7ef3f8cd14f445d7fc72293462e1b89f4636f8fbddade7108fa26cc4074b8ced2cfa930d5357ba0c8b7719698efca3536b8e612f2dd9583028c5b1878b7c5e59843043c4405b60a12d1aebb8c6545bbc661f6a1f902b6e53d822b2b4c8931aa52eeaac8d1dd8e60af20de85d4f13ce93f92483ec75c5d94af07dc3826722cce4097b", "operation":"decrypt","algorithm":"AES/CBC/PKCS5Padding","id":"1174085986" }}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"android.content.ContentResolver->query":{"uri":"content://com.workpail.inkpad.provider.NotePad/notes", "projection":"{ _id, title, modified, key }", "selection":"deleted=0", "selectionArgs":"null", "sortOrder":"modified DESC", "cancellationSignal":"null"}, "return":{"android.database.Cursor":"android.content.ContentResolver$CursorWrapperInner@42069420"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"android.content.ContentResolver->query":{"uri":"content://com.workpail.inkpad.provider.NotePad/notes", "projection":"{ _id, title, modified, key }", "selection":"deleted=0", "selectionArgs":"null", "sortOrder":"modified DESC"}, "return":{"android.database.Cursor":"android.content.ContentResolver$CursorWrapperInner@42069420"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"libcore.io.IoBridge->open":{"path":"/data/misc/keychain/pins", "flags":"0"}, "return":{"java.io.FileDescriptor":"FileDescriptor[101]"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage":{"plaintext":"65bd085e8d89e01b316ea1955b6f85dd464e6d42ea1f368ac05b32b505a94b9b44e0ea264eb521f5e52d22f0f52d9cba0ba96fc445e08d38a7b621f5b53611f84edbd2ff40854356be67c1f7f8ca772df80e5ff9be05bffb54be73c17f57ac7cefc24b37be7b21a2f6dff6f9fb17226cffdf8cff1fa845edf6f93b19fce2cff6f27f0d61fbd9fc3d8fff01504b0708347348112010000020220000504b01021400140008080800aa785a460000000002000000000000000900040000000000000000000000000000004d4554412d494e462ffeca0000504b01021400140008080800aa785a46d537ccf6430000004400000014000000000000000000000000003d0000004d4554412d494e462f4d414e49464553542e4d46504b01021400140008080800aa785a463473481120100000202200000b00000000000000000000000000c2000000636c61737365732e646578504b05060000000003000300b60000001b1100000000","encrypttext":"9830f32a20e9e1dce8a30d0d7539b29356b00b83abcde5f70e3f07f3b9e5229af2e6d9f883c94cd483956c5112420904e04191da544ee52da7076d0377f37fb44d17b6f9be5f6ccb5b424acb1bca20181bf7e10f5780da463b43e11092e34b40f55208c7621dd87f54340126c35ef58bbc19e7d04df8284fcb89e3c12d57db3c86281f6256e575bd687be5f68e265c2a120b4a7363acb3128e5be8c0e1875d9c4e7541f69ddee9f5a9fcad16395265d638d7fe70328baef39261e0b32ae5aa5c6e0e15c7492aa72441239356a7e04b488e22bd2d95262c3911d569d991fb0e25adba1ce01c6d4899327c63bb5f6cf7cf14bf8acec765fa8c5f29838595e0e0778fbf80e8446a5000ed4a6c446d03bbefed2b0b5e550586a7bec3317eefdd41d74d3192523827f0e894912d2f18d8dec4357d5899c32a193c25378818bd9f91140e93c49be8875d63d3257528865221cff683636824a7adbbaa9bae22e238efac33193763b91e1e7f4087b3514bf36047", "operation":"decrypt","algorithm":"AES/CBC/PKCS5Padding","id":"1174085986" }}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"libcore.io.IoBridge->open":{"path":"/data/data/com.workpail.inkpad.notepad.notes/cache/ads-985550498.jar", "flags":"577"}, "return":{"java.io.FileDescriptor":"FileDescriptor[101]"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage": {"operation": "keyalgo", "key": "-10, 50, 25, 120, -94, -100, -33, -42, -87, 104, -92, -8, -77, 90, -104, -16", "algorithm": "AES"}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage":{"plaintext":"636f6d2e676f6f676c652e616e64726f69642e6164732e7a78787a2e63","encrypttext":"c8401de396b2d117b15674b3c9010b7f06db0ceceb03f03ed52c579b923fb5f8", "operation":"decrypt","algorithm":"AES/CBC/PKCS5Padding","id":"1151988387" }}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage": {"operation": "keyalgo", "key": "-10, 50, 25, 120, -94, -100, -33, -42, -87, 104, -92, -8, -77, 90, -104, -16", "algorithm": "AES"}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage":{"plaintext":"636f6d2e676f6f676c652e616e64726f69642e6164732e7a78787a2e6a","encrypttext":"784e579ca77357c104a4a103e6d60a2f84ce3c10aabec9d9ebd90d09b39bc0d5", "operation":"decrypt","algorithm":"AES/CBC/PKCS5Padding","id":"1051197670" }}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage": {"operation": "keyalgo", "key": "-10, 50, 25, 120, -94, -100, -33, -42, -87, 104, -92, -8, -77, 90, -104, -16", "algorithm": "AES"}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage":{"plaintext":"636f6d2e676f6f676c652e616e64726f69642e6164732e7a78787a2e67","encrypttext":"250c2660c2ccd5e3a95c242520136e17ac64d848c0e09a58a3b871e0b6bfe781", "operation":"decrypt","algorithm":"AES/CBC/PKCS5Padding","id":"1506691777" }}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage": {"operation": "keyalgo", "key": "-10, 50, 25, 120, -94, -100, -33, -42, -87, 104, -92, -8, -77, 90, -104, -16", "algorithm": "AES"}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage":{"plaintext":"636f6d2e676f6f676c652e616e64726f69642e6164732e7a78787a2e65","encrypttext":"1a0ead0b991c37fc46ef79d03c1367b5fe5733d19df1dc83640ddfa696cd6377", "operation":"decrypt","algorithm":"AES/CBC/PKCS5Padding","id":"1401114033" }}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage": {"operation": "keyalgo", "key": "-10, 50, 25, 120, -94, -100, -33, -42, -87, 104, -92, -8, -77, 90, -104, -16", "algorithm": "AES"}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage":{"plaintext":"636f6d2e676f6f676c652e616e64726f69642e6164732e7a78787a2e6b","encrypttext":"5e5d21fa10b1d2a647e305f4067c2d2387d0d62edba94ffc4f88fc83e7fc2eda", "operation":"decrypt","algorithm":"AES/CBC/PKCS5Padding","id":"1509652375" }}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage": {"operation": "keyalgo", "key": "-10, 50, 25, 120, -94, -100, -33, -42, -87, 104, -92, -8, -77, 90, -104, -16", "algorithm": "AES"}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage":{"plaintext":"636f6d2e676f6f676c652e616e64726f69642e6164732e7a78787a2e64","encrypttext":"50bdecea89240a7d57c4ee8ad42af2f395d8aad66ddce7f8eba33f6f0c0952b6", "operation":"decrypt","algorithm":"AES/CBC/PKCS5Padding","id":"1766382347" }}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage": {"operation": "keyalgo", "key": "-10, 50, 25, 120, -94, -100, -33, -42, -87, 104, -92, -8, -77, 90, -104, -16", "algorithm": "AES"}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage":{"plaintext":"636f6d2e676f6f676c652e616e64726f69642e6164732e7a78787a2e69","encrypttext":"8ef2c96ea5b47e21c24ed3b270e9a8ffb248ca0a5aba008585ca4a0dba75f4db", "operation":"decrypt","algorithm":"AES/CBC/PKCS5Padding","id":"465222126" }}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage": {"operation": "keyalgo", "key": "-10, 50, 25, 120, -94, -100, -33, -42, -87, 104, -92, -8, -77, 90, -104, -16", "algorithm": "AES"}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage":{"plaintext":"636f6d2e676f6f676c652e616e64726f69642e6164732e7a78787a2e68","encrypttext":"c52c1bda5238777bbf8480ed041ff8eb632414441d614eaf5d030137e4e428fa", "operation":"decrypt","algorithm":"AES/CBC/PKCS5Padding","id":"365375625" }}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"java.net.InetAddress->getByAddress":{"hostName":"null", "ipAddress":"{ 74, 6, 105, 9 }", "scopeId":"0"}, "return":{"java.net.InetAddress":"/74.6.105.9"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"java.net.InetAddress->getAllByName":{"host":"data.flurry.com"}, "return":{"[Ljava.net.InetAddress;":"{ data.flurry.com/74.6.105.9 }"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"java.net.InetAddress->getByAddress":{"hostName":"null", "ipAddress":"{ 74, 6, 105, 9 }", "scopeId":"0"}, "return":{"java.net.InetAddress":"/74.6.105.9"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"java.net.InetAddress->getByAddress":{"hostName":"null", "ipAddress":"{ 74, 6, 105, 9 }", "scopeId":"0"}, "return":{"java.net.InetAddress":"/74.6.105.9"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"java.net.InetAddress->getByAddress":{"hostName":"null", "ipAddress":"{ 74, 6, 105, 9 }", "scopeId":"0"}, "return":{"java.net.InetAddress":"/74.6.105.9"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"java.net.InetAddress->getByName":{"host":"74.6.105.9"}, "return":{"java.net.InetAddress":"/74.6.105.9"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"java.net.InetAddress->getByAddress":{"hostName":"null", "ipAddress":"{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }", "scopeId":"0"}, "return":{"java.net.InetAddress":"/::"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage": {"operation": "keyalgo", "key": "-10, 50, 25, 120, -94, -100, -33, -42, -87, 104, -92, -8, -77, 90, -104, -16", "algorithm": "AES"}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"java.net.InetAddress->getByAddress":{"hostName":"null", "ipAddress":"{ 10, 10, -104, 81 }", "scopeId":"0"}, "return":{"java.net.InetAddress":"/10.10.152.81"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"java.net.InetAddress->getAllByName":{"host":"data.flurry.com"}, "return":{"[Ljava.net.InetAddress;":"{ data.flurry.com/74.6.105.9 }"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"java.net.InetAddress->getByAddress":{"hostName":"null", "ipAddress":"{ 74, 6, 105, 9 }", "scopeId":"0"}, "return":{"java.net.InetAddress":"/74.6.105.9"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"java.net.InetAddress->getByAddress":{"hostName":"null", "ipAddress":"{ 74, 6, 105, 9 }", "scopeId":"0"}, "return":{"java.net.InetAddress":"/74.6.105.9"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"java.net.InetAddress->getByAddress":{"hostName":"null", "ipAddress":"{ 74, 6, 105, 9 }", "scopeId":"0"}, "return":{"java.net.InetAddress":"/74.6.105.9"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"java.net.InetAddress->getByName":{"host":"74.6.105.9"}, "return":{"java.net.InetAddress":"/74.6.105.9"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"java.net.InetAddress->getByAddress":{"hostName":"null", "ipAddress":"{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }", "scopeId":"0"}, "return":{"java.net.InetAddress":"/::"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"java.net.InetAddress->getByAddress":{"hostName":"null", "ipAddress":"{ 10, 10, -104, 81 }", "scopeId":"0"}, "return":{"java.net.InetAddress":"/10.10.152.81"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"java.net.InetAddress->getAllByName":{"host":"data.flurry.com"}, "return":{"[Ljava.net.InetAddress;":"{ data.flurry.com/74.6.105.9 }"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage":{"plaintext":"636f6d2e676f6f676c652e616e64726f69642e6164732e7a78787a2e62","encrypttext":"ec6f98ebd83d6a527119e5432a0bb7afe13f9d190a2f41685399f72e831cd4f9", "operation":"decrypt","algorithm":"AES/CBC/PKCS5Padding","id":"719306796" }}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"java.net.InetAddress->getByAddress":{"hostName":"null", "ipAddress":"{ 74, 6, 105, 9 }", "scopeId":"0"}, "return":{"java.net.InetAddress":"/74.6.105.9"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage": {"operation": "keyalgo", "key": "-10, 50, 25, 120, -94, -100, -33, -42, -87, 104, -92, -8, -77, 90, -104, -16", "algorithm": "AES"}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"java.net.InetAddress->getByAddress":{"hostName":"null", "ipAddress":"{ 74, 6, 105, 9 }", "scopeId":"0"}, "return":{"java.net.InetAddress":"/74.6.105.9"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage":{"plaintext":"636f6d2e676f6f676c652e616e64726f69642e6164732e7a78787a2e66","encrypttext":"96b05450d9505092c383f9eb5c0f39b6abb93355e696bf1296986e4114cfefaf", "operation":"decrypt","algorithm":"AES/CBC/PKCS5Padding","id":"1073276516" }}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"java.net.InetAddress->getByAddress":{"hostName":"null", "ipAddress":"{ 74, 6, 105, 9 }", "scopeId":"0"}, "return":{"java.net.InetAddress":"/74.6.105.9"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"java.net.InetAddress->getByName":{"host":"74.6.105.9"}, "return":{"java.net.InetAddress":"/74.6.105.9"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"java.net.InetAddress->getByAddress":{"hostName":"null", "ipAddress":"{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }", "scopeId":"0"}, "return":{"java.net.InetAddress":"/::"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"java.net.InetAddress->getByAddress":{"hostName":"null", "ipAddress":"{ 10, 10, -104, 81 }", "scopeId":"0"}, "return":{"java.net.InetAddress":"/10.10.152.81"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"java.net.InetAddress->getAllByName":{"host":"data.flurry.com"}, "return":{"[Ljava.net.InetAddress;":"{ data.flurry.com/74.6.105.9 }"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage": {"operation": "keyalgo", "key": "-10, 50, 25, 120, -94, -100, -33, -42, -87, 104, -92, -8, -77, 90, -104, -16", "algorithm": "AES"}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"java.net.InetAddress->getByAddress":{"hostName":"null", "ipAddress":"{ 74, 6, 105, 9 }", "scopeId":"0"}, "return":{"java.net.InetAddress":"/74.6.105.9"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage":{"plaintext":"636f6d2e676f6f676c652e616e64726f69642e6164732e7a78787a2e61","encrypttext":"bc06186430e62b60a831bd249502bd7f455630fdc43b6c4d56ab4a6a87b6e0d3", "operation":"decrypt","algorithm":"AES/CBC/PKCS5Padding","id":"1153510232" }}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"java.net.InetAddress->getByAddress":{"hostName":"null", "ipAddress":"{ 74, 6, 105, 9 }", "scopeId":"0"}, "return":{"java.net.InetAddress":"/74.6.105.9"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"java.net.InetAddress->getByAddress":{"hostName":"null", "ipAddress":"{ 74, 6, 105, 9 }", "scopeId":"0"}, "return":{"java.net.InetAddress":"/74.6.105.9"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"java.net.InetAddress->getByName":{"host":"74.6.105.9"}, "return":{"java.net.InetAddress":"/74.6.105.9"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"java.net.InetAddress->getByAddress":{"hostName":"null", "ipAddress":"{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }", "scopeId":"0"}, "return":{"java.net.InetAddress":"/::"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"java.net.InetAddress->getByAddress":{"hostName":"null", "ipAddress":"{ 10, 10, -104, 81 }", "scopeId":"0"}, "return":{"java.net.InetAddress":"/10.10.152.81"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage": {"operation": "keyalgo", "key": "-10, 50, 25, 120, -94, -100, -33, -42, -87, 104, -92, -8, -77, 90, -104, -16", "algorithm": "AES"}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage":{"plaintext":"61","encrypttext":"495f6c15188dcd4edb8e9f4f14f697b9", "operation":"decrypt","algorithm":"AES/CBC/PKCS5Padding","id":"268171476" }}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage": {"operation": "keyalgo", "key": "-10, 50, 25, 120, -94, -100, -33, -42, -87, 104, -92, -8, -77, 90, -104, -16", "algorithm": "AES"}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage":{"plaintext":"61","encrypttext":"c9af18d87f5e6c5fdcb4ff0f46db2cd8", "operation":"decrypt","algorithm":"AES/CBC/PKCS5Padding","id":"558879709" }}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage": {"operation": "keyalgo", "key": "-10, 50, 25, 120, -94, -100, -33, -42, -87, 104, -92, -8, -77, 90, -104, -16", "algorithm": "AES"}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage":{"plaintext":"61","encrypttext":"ce5253f464040f057a9a8d5f6f7b1004", "operation":"decrypt","algorithm":"AES/CBC/PKCS5Padding","id":"2147141734" }}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage": {"operation": "keyalgo", "key": "-10, 50, 25, 120, -94, -100, -33, -42, -87, 104, -92, -8, -77, 90, -104, -16", "algorithm": "AES"}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage":{"plaintext":"61","encrypttext":"39e234f1074ff5de9db44e479c95c85b", "operation":"decrypt","algorithm":"AES/CBC/PKCS5Padding","id":"1782225295" }}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage": {"operation": "keyalgo", "key": "-10, 50, 25, 120, -94, -100, -33, -42, -87, 104, -92, -8, -77, 90, -104, -16", "algorithm": "AES"}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage":{"plaintext":"61","encrypttext":"f573ec199b212b009fc2a94fdb74320f", "operation":"decrypt","algorithm":"AES/CBC/PKCS5Padding","id":"1953673274" }}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage": {"operation": "keyalgo", "key": "-10, 50, 25, 120, -94, -100, -33, -42, -87, 104, -92, -8, -77, 90, -104, -16", "algorithm": "AES"}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage":{"plaintext":"61","encrypttext":"866a4a84eaca13b6911edcab39f61a19", "operation":"decrypt","algorithm":"AES/CBC/PKCS5Padding","id":"1430260269" }}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage": {"operation": "keyalgo", "key": "-10, 50, 25, 120, -94, -100, -33, -42, -87, 104, -92, -8, -77, 90, -104, -16", "algorithm": "AES"}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage":{"plaintext":"61","encrypttext":"3b8fce76f19580503e3497946b3c3901", "operation":"decrypt","algorithm":"AES/CBC/PKCS5Padding","id":"10924981" }}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage": {"operation": "keyalgo", "key": "-10, 50, 25, 120, -94, -100, -33, -42, -87, 104, -92, -8, -77, 90, -104, -16", "algorithm": "AES"}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage":{"plaintext":"61","encrypttext":"12c072022101d1debc4736524e9a3a43", "operation":"decrypt","algorithm":"AES/CBC/PKCS5Padding","id":"419866213" }}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage": {"operation": "keyalgo", "key": "-10, 50, 25, 120, -94, -100, -33, -42, -87, 104, -92, -8, -77, 90, -104, -16", "algorithm": "AES"}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage":{"plaintext":"61","encrypttext":"445b42d66a128a7a9797eb08d3f81f59", "operation":"decrypt","algorithm":"AES/CBC/PKCS5Padding","id":"307812803" }}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage": {"operation": "keyalgo", "key": "-10, 50, 25, 120, -94, -100, -33, -42, -87, 104, -92, -8, -77, 90, -104, -16", "algorithm": "AES"}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage":{"plaintext":"61","encrypttext":"fd587d94f971d44fd075c59fbba70139", "operation":"decrypt","algorithm":"AES/CBC/PKCS5Padding","id":"1957142470" }}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage": {"operation": "keyalgo", "key": "-10, 50, 25, 120, -94, -100, -33, -42, -87, 104, -92, -8, -77, 90, -104, -16", "algorithm": "AES"}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], "CryptoUsage":{"plaintext":"61","encrypttext":"e938472c80ca382badb0c531143d2c8b", "operation":"decrypt","algorithm":"AES/CBC/PKCS5Padding","id":"1918955503" }}
+I/EagleEye(  548): {"Basic":["10084", "0","false"], "InvokeApi":{"java.io.File->delete":{"file":"/data/data/com.workpail.inkpad.notepad.notes/cache/ads-985550498.jar"},"return":["boolean":"true"]}}
+I/EagleEye(  548): {"Basic":["10084", "0","false"], "InvokeApi":{"java.io.File->delete":{"file":"/data/data/com.workpail.inkpad.notepad.notes/cache/ads-985550498.dex"},"return":["boolean":"true"]}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"libcore.io.IoBridge->open":{"path":"/data/app/com.workpail.inkpad.notepad.notes-2.apk", "flags":"0"}, "return":{"java.io.FileDescriptor":"FileDescriptor[102]"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"android.app.Instrumentation->execStartActivity":{"who":"com.workpail.inkpad.notepad.notes.ui.activity.NotesListActivity@41f8a220", "contextThread":"android.app.ActivityThread$ApplicationThread@41f64648", "token":"android.os.BinderProxy@41f66850", "target":"com.workpail.inkpad.notepad.notes.ui.activity.NotesListActivity@41f8a220", "intent":"Intent { act=android.intent.action.VIEW dat=content://com.workpail.inkpad.provider.NotePad/notes/3 (has extras) }", "requestCode":"-1", "options":"null"}, "return":{"null":"null"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"android.provider.Settings.Secure->getString":{"resolver":"android.app.ContextImpl$ApplicationContentResolver@42079bb8", "name":"android_id"}, "return":{"java.lang.String":"8c035791bde91ecb"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"android.provider.Settings.Secure->getString":{"resolver":"android.app.ContextImpl$ApplicationContentResolver@42079bb8", "name":"android_id"}, "return":{"java.lang.String":"8c035791bde91ecb"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"libcore.io.IoBridge->open":{"path":"/data/app/com.workpail.inkpad.notepad.notes-2.apk", "flags":"0"}, "return":{"java.io.FileDescriptor":"FileDescriptor[109]"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"android.content.ContentResolver->query":{"uri":"content://com.workpail.inkpad.provider.NotePad/notes/3", "projection":"{ _id, note, key, title, modified, view_mode }", "selection":"null", "selectionArgs":"null", "sortOrder":"null", "cancellationSignal":"null"}, "return":{"android.database.Cursor":"android.content.ContentResolver$CursorWrapperInner@420ab700"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"android.content.ContentResolver->query":{"uri":"content://com.workpail.inkpad.provider.NotePad/notes/3", "projection":"{ _id, note, key, title, modified, view_mode }", "selection":"null", "selectionArgs":"null", "sortOrder":"null"}, "return":{"android.database.Cursor":"android.content.ContentResolver$CursorWrapperInner@420ab700"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"android.provider.Settings.Secure->getString":{"resolver":"android.app.ContextImpl$ApplicationContentResolver@42079bb8", "name":"android_id"}, "return":{"java.lang.String":"8c035791bde91ecb"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"libcore.io.IoBridge->open":{"path":"/proc/meminfo", "flags":"0"}, "return":{"java.io.FileDescriptor":"FileDescriptor[108]"}}}
+I/EagleEye(  548): ***param: title=Vmvkfkgkg is_synced=false note=Vmvkfkgkg
+I/EagleEye(  548): Woooooo
+I/EagleEye(  548): Tttttt
+I/EagleEye(  548): Gkgjfj
+I/EagleEye(  548): Hi ther
+I/EagleEye(  548): Tttgxh
+I/EagleEye(  548): Hhhh
+I/EagleEye(  548): Ooooooo
+I/EagleEye(  548): Gggggg view_mode=0 modified=1447639744308
+I/EagleEye(  548): type: class android.content.ContentValues
+I/EagleEye(  548): value: Vmvkfkgkg
+I/EagleEye(  548): Woooooo
+I/EagleEye(  548): Tttttt
+I/EagleEye(  548): Gkgjfj
+I/EagleEye(  548): Hi ther
+I/EagleEye(  548): Tttgxh
+I/EagleEye(  548): Hhhh
+I/EagleEye(  548): Ooooooo
+I/EagleEye(  548): Gggggg
+I/EagleEye(  548): new values: title=Vmvkfkgkg is_synced=false note=muhahaha view_mode=0 modified=1447639744308
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"android.content.ContentResolver->update":{"uri":"content://com.workpail.inkpad.provider.NotePad/notes/3", "values":"title=Vmvkfkgkg is_synced=false note=muhahaha view_mode=0 modified=1447639744308", "where":"null", "selectionArgs":"null"}, "return":{"int":"1"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"android.content.ContentResolver->query":{"uri":"content://com.workpail.inkpad.provider.NotePad/notes/3", "projection":"{ _id, note, key, title, modified, view_mode }", "selection":"null", "selectionArgs":"null", "sortOrder":"null", "cancellationSignal":"null"}, "return":{"android.database.Cursor":"android.content.ContentResolver$CursorWrapperInner@420f14f8"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"android.content.ContentResolver->query":{"uri":"content://com.workpail.inkpad.provider.NotePad/notes/3", "projection":"{ _id, note, key, title, modified, view_mode }", "selection":"null", "selectionArgs":"null", "sortOrder":"null"}, "return":{"android.database.Cursor":"android.content.ContentResolver$CursorWrapperInner@420f14f8"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"libcore.io.IoBridge->open":{"path":"/storage/emulated/0/InkPad_Notepad/backup/3/Vmvkfkgkg-1447639744308.txt", "flags":"577"}, "return":{"java.io.FileDescriptor":"FileDescriptor[108]"}}}
+I/EagleEye(  548): {"Basic":["10084", "0","false"], "InvokeApi":{"java.io.File->delete":{"file":"/storage/emulated/0/InkPad_Notepad/backup/3/Vmvkfkgkg-1447638294722.txt"},"return":["boolean":"true"]}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"android.net.ConnectivityManager->getActiveNetworkInfo":{}, "return":{"android.net.NetworkInfo":"NetworkInfo: type: WIFI[], state: CONNECTED/CONNECTED, reason: (unspecified), extra: "Dartmouth Public", roaming: false, failover: false, isAvailable: true, isConnectedToProvisioningNetwork: false"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"android.app.ContextImpl->startService":{"service":"Intent { cmp=com.workpail.inkpad.notepad.notes/.service.SyncIntentService }"}, "return":{"android.content.ComponentName":"ComponentInfo{com.workpail.inkpad.notepad.notes/com.workpail.inkpad.notepad.notes.service.SyncIntentService}"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"android.content.ContentResolver->query":{"uri":"content://com.workpail.inkpad.provider.NotePad/notes", "projection":"{ _id, title, modified, key }", "selection":"deleted=0", "selectionArgs":"null", "sortOrder":"modified DESC", "cancellationSignal":"null"}, "return":{"android.database.Cursor":"android.content.ContentResolver$CursorWrapperInner@42018260"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"android.content.ContentResolver->query":{"uri":"content://com.workpail.inkpad.provider.NotePad/notes", "projection":"{ _id, title, modified, key }", "selection":"deleted=0", "selectionArgs":"null", "sortOrder":"modified DESC"}, "return":{"android.database.Cursor":"android.content.ContentResolver$CursorWrapperInner@42018260"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"android.content.ContentResolver->query":{"uri":"content://com.workpail.inkpad.provider.NotePad/notes", "projection":"{ _id, title, modified, key }", "selection":"deleted=0", "selectionArgs":"null", "sortOrder":"modified DESC", "cancellationSignal":"null"}, "return":{"android.database.Cursor":"android.content.ContentResolver$CursorWrapperInner@420d86f0"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"android.content.ContentResolver->query":{"uri":"content://com.workpail.inkpad.provider.NotePad/notes", "projection":"{ _id, title, modified, key }", "selection":"deleted=0", "selectionArgs":"null", "sortOrder":"modified DESC"}, "return":{"android.database.Cursor":"android.content.ContentResolver$CursorWrapperInner@420d86f0"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"android.accounts.AccountManager->getAuthToken":{"account":"Account {name=davidxiaohanwu@gmail.com, type=com.google}", "authTokenType":"ah", "options":"null", "notifyAuthFailure":"false", "callback":"null", "handler":"null"}, "return":{"android.accounts.AccountManagerFuture":"android.accounts.AccountManager$6@4207f9c8"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"android.accounts.AccountManager->getAuthToken":{"account":"Account {name=davidxiaohanwu@gmail.com, type=com.google}", "authTokenType":"ah", "notifyAuthFailure":"false", "callback":"null", "handler":"null"}, "return":{"android.accounts.AccountManagerFuture":"android.accounts.AccountManager$6@4207f9c8"}}}
+I/EagleEye(  548): {"Basic":["10084","0","false"], 
+I/EagleEye(  548): 
+I/EagleEye(  548): 	"InvokeApi":{"libcore.io.IoBridge->open":{"path":"/data/data/com.workpail.inkpad.notepad.notes/shared_prefs/notes_preferences.xml", "flags":"577"}, "return":{"java.io.FileDescriptor":"FileDescriptor[95]"}}}
+I/EagleEye(  548): {"Basic":["10084", "0","false"], "InvokeApi":{"java.io.File->delete":{"file":"/data/data/com.workpail.inkpad.notepad.notes/shared_prefs/notes_preferences.xml.bak"},"return":["boolean":"true"]}}

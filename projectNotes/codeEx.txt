@@ -1,0 +1,41 @@
+code ex path
+
+android:
+	init.rc boots the os
+		calls /system/bin/app_process
+			loads needed classes, invokes init methods
+
+xposed: 
+	install framework as root
+	copy modified app_process into /system/bin 
+		https://github.com/rovo89/Xposed/blob/master/xposed.cpp#L315
+		https://github.com/rovo89/Xposed/blob/master/xposed.cpp#L369
+		https://github.com/rovo89/Xposed/blob/master/app_main.cpp#L256		
+		https://github.com/rovo89/Xposed/blob/master/app_main.cpp#L258
+
+		this jar is added to the classpath (XposedBridge.jar)
+			https://github.com/rovo89/XposedBridge/blob/master/src/de/robv/android/xposed/XposedBridge.java
+				main -> initXbridgeZygote() -> hook methods 
+
+eagleeye:
+	register as xposed module in AndroidManifest.xml
+	add init class in app/src/main/assets/xposed_init
+		points to app/src/main/java/Tutorial
+			-> overwrites hookSystemApis()
+				-> hookAll() -> hook() -> creates new XC_MethodHook and calls XposedBridge.hookMethod()
+					https://github.com/rovo89/XposedBridge/blob/master/src/de/robv/android/xposed/XposedBridge.java#L506
+						-> hookMethodNative()
+
+	when a method is called that's defined in Tutorial.hookSystemApis(),
+	https://github.com/MindMac/AndroidEagleEye/blob/master/EagleEye/src/com/mindmac/eagleeye/service/Launcher.java#L94
+	we go to the java class defined for that hook
+	i.e. ContentResolverHook: hookAll(ContentResolverHook.getMethodHookList()); in app/src/main/hookclass/ContentResolverHook
+		https://github.com/MindMac/AndroidEagleEye/blob/master/EagleEye/src/com/mindmac/eagleeye/hookclass/ContentResolverHook.java
+		extends MethodHook, which is the EagleEye hooking object
+			-> before() gets called before the method runs. This is because in Tutorial.hook(), the XC_MethodHook obj we make is instantiated with methodHook.before(param) for its beforeHookedMethod (Tutorial line 398)
+				-> modify data there
+
+other interesting links:
+	http://www.shaneenishry.com/blog/2014/08/17/ndk-with-android-studio/
+	https://github.com/rovo89/XposedBridge/wiki/Development-tutorial
+	http://www.cydiasubstrate.com/
