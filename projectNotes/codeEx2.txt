@@ -1,0 +1,89 @@
+1. where exactly does xposed look up and call the hooks defined by eagleeye?
+2. how does xposed/eagleeye check which uids to hook?
+3. look at native method hooking
+
+
+
+Registering the callback:
+
+	XposedBridge.main calls->
+	XposedBridge.loadModule()
+		Loads our xposed module 
+		Reads in the class name in assets/xposed_init (i.e. Tutorial)
+		Sees what it implements
+		For all instances of IXposedMods it implements, do stuff
+		https://github.com/rovo89/XposedBridge/blob/da5483c12ee5e436a945e0bdb352bf30389bb410/src/de/robv/android/xposed/XposedBridge.java#L483
+			call our module's Tutorial's initZygote()
+				Calls some stuff
+				Calls hookSystemApis() -> hookAll -> hook()
+					-> XposedBridge.hookMethod()
+
+	XposedBridge.hookMethod()
+		https://github.com/rovo89/XposedBridge/blob/da5483c12ee5e436a945e0bdb352bf30389bb410/src/de/robv/android/xposed/XposedBridge.java#L542
+		Registers a callback object for a method
+			callbacks = sHookedMethodCallbacks.get(hookMethod)
+			callbacks.add(callback)
+			AdditionalHookInfo additionalInfo = new AdditionalHookInfo(callbacks, parameterTypes, returnType);
+			hookMethodNative(hookMethod, declaringClass, slot, additionalInfo);
+
+
+Passing control to the register callbacks:
+
+	XposedInstaller installs a custom app_process
+		Writes "arm/" + "app_process_xposed_sdk" to "bin/app_process"
+			https://github.com/rovo89/XposedInstaller/blob/cdb3f47895f5543eca0ff94861f5a98b343213c6/src/de/robv/android/xposed/installer/util/AssetUtil.java#L23
+		https://github.com/rovo89/XposedInstaller/blob/cdb3f47895f5543eca0ff94861f5a98b343213c6/src/de/robv/android/xposed/installer/InstallerFragment.java#L627
+		https://github.com/rovo89/XposedInstaller/blob/cdb3f47895f5543eca0ff94861f5a98b343213c6/src/de/robv/android/xposed/installer/InstallerFragment.java#L692
+		AssetUtil.writeAssetToFile() pretty much writes the bytes from the specified file to the location we want to install in. 
+			https://github.com/rovo89/XposedInstaller/blob/cdb3f47895f5543eca0ff94861f5a98b343213c6/src/de/robv/android/xposed/installer/util/AssetUtil.java#L54
+	Where's the code of app_process? 
+		arm/app_process_xposed_sdk
+	what is the high level code that compiles to this? idk why there's two, I think the second one is much more recent though
+		https://github.com/rovo89/Xposed/blob/6a8c2db5523377742a2c40fbd317b559e46b386f/app_main.cpp
+		https://github.com/rovo89/Xposed/blob/653c5eaf7281c9c8a6d981106d084cc98059544d/app_main2.cpp
+
+	app_main2.cpp overwrites android's original app_process
+		https://github.com/android/platform_frameworks_base/blob/master/core/jni/AndroidRuntime.cpp
+	it also defines a onVmCreated, which calls xposed:onVmCreated
+		https://github.com/rovo89/Xposed/blob/6a8c2db5523377742a2c40fbd317b559e46b386f/libxposed_dalvik.cpp#L47
+		This finds the XposedBridge class, and calls register_natives_XposedBridge (line 81)
+			https://github.com/rovo89/Xposed/blob/653c5eaf7281c9c8a6d981106d084cc98059544d/libxposed_common.cpp#L286
+			This registers some native methods according to JNIEnv->RegisterNatives 
+				pretty much defines (registers in the JVM env) the native methods in XposedBridge such as hookMethodNative() and initNative()
+				http://stackoverflow.com/questions/1010645/what-does-the-registernatives-method-do
+
+	main function of XposedBridge
+		https://github.com/rovo89/XposedBridge/blob/da5483c12ee5e436a945e0bdb352bf30389bb410/src/de/robv/android/xposed/XposedBridge.java#L88
+		calls loadModules() and initNative()
+			initNative() is the native function that we added to the JVM env with register_natives_XposedBridge
+				https://github.com/rovo89/Xposed/blob/653c5eaf7281c9c8a6d981106d084cc98059544d/libxposed_common.cpp#L78
+				calls https://github.com/rovo89/Xposed/blob/6a8c2db5523377742a2c40fbd317b559e46b386f/libxposed_dalvik.cpp#L165
+
+	Xposed.libxposed_dalvik.callback_XposedBridge_initNative
+		makes sure XposedBridge.handleHookedMethod exists
+		makes sure XposedBridge.invokeOriginalMethodNative exists
+		adds Xposed.libxposed_davlik.XposedBridge_invokeOriginalMethodNative to the env
+		So now invokeOriginalMethodNative and hookMethodNative native methods are defined for XposedBridge
+			note that hookMethodNative was called from (XposedBridge.main -> loadModule() -> hookMethod())
+
+	hookMethodNative()
+		https://github.com/rovo89/Xposed/blob/6a8c2db5523377742a2c40fbd317b559e46b386f/libxposed_dalvik.cpp#L289
+		EagleEye -> tutorial -> hookall -> hook -> pass in registered callback code to XposedBridge.hookMethod
+			-> calledback code is passed in to hookMethodNative as the last parameter (Object additionalInfo)
+		Replaces the method with the callback code
+			https://github.com/rovo89/Xposed/blob/6a8c2db5523377742a2c40fbd317b559e46b386f/libxposed_dalvik.cpp#L316
+			Method method = dvmSlotToMethod()
+			method->nativeFunc = &hookedMethodCallback
+				hookedMethodCallback populates the feilds for XposedBridge's XC_MethodHook class
+				calls the function handler https://github.com/rovo89/Xposed/blob/6a8c2db5523377742a2c40fbd317b559e46b386f/libxposed_dalvik.cpp#L262
+				returns the return value
+
+
+
+Tracking UIDs
+	Registering:
+		Tutorial.handleLoadPackage -> Util.storeFrameworkLogAppUids()
+	Checking:
+		Tutorial.handleLoadPackage -> Util.isAppNeedFrLog() (if not, don't hook)
+
+
