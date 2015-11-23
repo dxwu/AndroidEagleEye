@@ -6,7 +6,11 @@
 
 Registering the callback:
 
-	XposedBridge.main calls->
+	overwritten app_process: onStarted
+		AndroidRuntime->callMain() https://github.com/rovo89/Xposed/blob/653c5eaf7281c9c8a6d981106d084cc98059544d/app_main2.cpp#L97
+			XpsoedBridge->main()
+
+	XposedBridge.main calls-> loadModules() -> 
 	XposedBridge.loadModule()
 		Loads our xposed module 
 		Reads in the class name in assets/xposed_init (i.e. Tutorial)
@@ -76,14 +80,38 @@ Passing control to the register callbacks:
 			method->nativeFunc = &hookedMethodCallback
 				hookedMethodCallback populates the feilds for XposedBridge's XC_MethodHook class
 				calls the function handler https://github.com/rovo89/Xposed/blob/6a8c2db5523377742a2c40fbd317b559e46b386f/libxposed_dalvik.cpp#L262
+					dvmCallMethod
+						https://android.googlesource.com/platform/dalvik/+/tools_r21/vm/interp/Stack.cpp#424
 				returns the return value
-
-
 
 Tracking UIDs
 	Registering:
 		Tutorial.handleLoadPackage -> Util.storeFrameworkLogAppUids()
+		Tutorial.handleLoadPackage is called when the xposed module is loaded
+			XposedBridge.loadModules: https://github.com/rovo89/XposedBridge/blob/art/src/de/robv/android/xposed/XposedBridge.java#L487
+				hookLoadPackage -> sLoadedPackageCallbacks.add(callback);
+		XposedBridge.initForZygote adds the callbacks when zygote is started
+			https://github.com/rovo89/XposedBridge/blob/art/src/de/robv/android/xposed/XposedBridge.java#L235
+			calls hookAllConstructors -> hookMethod
+				https://github.com/rovo89/XposedBridge/blob/art/src/de/robv/android/xposed/XposedBridge.java#L542
+				calls hookMethodNative
+
 	Checking:
 		Tutorial.handleLoadPackage -> Util.isAppNeedFrLog() (if not, don't hook)
+
+
+Questions
+	Dalvik / art reflection	
+	dvmMethods() library in libxposed_dalvik.cp
+		https://android.googlesource.com/platform/dalvik/+/tools_r21/vm/Jni.cpp
+	Method class
+		https://github.com/rovo89/Xposed/blob/6a8c2db5523377742a2c40fbd317b559e46b386f/libxposed_dalvik.h
+		includes it from Dalvik.h
+			https://android.googlesource.com/platform/dalvik/+/tools_r21/vm/Dalvik.h
+			includes Object.h
+				https://android.googlesource.com/platform/dalvik/+/6d874d2bda563ada1034d2b3219b35d800fc6860/vm/oo/Object.h
+				struct method
+					https://android.googlesource.com/platform/dalvik/+/6d874d2bda563ada1034d2b3219b35d800fc6860/vm/oo/Object.h#418
+					has nativeFunc field
 
 
