@@ -1,8 +1,9 @@
 1. where exactly does xposed look up and call the hooks defined by eagleeye?
 2. how does xposed/eagleeye check which uids to hook?
-3. look at native method hooking
 
-
+Important links:
+	JNIEnv->RegisterNatives() http://stackoverflow.com/questions/1010645/what-does-the-registernatives-method-do
+	actual hook https://android.googlesource.com/platform/dalvik/+/tools_r21/vm/interp/Stack.cpp#522
 
 Registering the callback:
 
@@ -96,22 +97,36 @@ Tracking UIDs
 				https://github.com/rovo89/XposedBridge/blob/art/src/de/robv/android/xposed/XposedBridge.java#L542
 				calls hookMethodNative
 
-	Checking:
-		Tutorial.handleLoadPackage -> Util.isAppNeedFrLog() (if not, don't hook)
+Checking:
+	Tutorial.handleLoadPackage -> Util.isAppNeedFrLog() (if not, don't hook)
+		dvmMethods() library in libxposed_dalvik.cp
+	https://android.googlesource.com/platform/dalvik/+/tools_r21/vm/Jni.cpp
+Method class
+	https://github.com/rovo89/Xposed/blob/6a8c2db5523377742a2c40fbd317b559e46b386f/libxposed_dalvik.h
+	includes it from Dalvik.h
+		https://android.googlesource.com/platform/dalvik/+/tools_r21/vm/Dalvik.h
+		includes Object.h
+			https://android.googlesource.com/platform/dalvik/+/6d874d2bda563ada1034d2b3219b35d800fc6860/vm/oo/Object.h
+			struct method
+				https://android.googlesource.com/platform/dalvik/+/6d874d2bda563ada1034d2b3219b35d800fc6860/vm/oo/Object.h#418
+				has nativeFunc field
 
 
 Questions
-	Dalvik / art reflection	
-	dvmMethods() library in libxposed_dalvik.cp
-		https://android.googlesource.com/platform/dalvik/+/tools_r21/vm/Jni.cpp
-	Method class
-		https://github.com/rovo89/Xposed/blob/6a8c2db5523377742a2c40fbd317b559e46b386f/libxposed_dalvik.h
-		includes it from Dalvik.h
-			https://android.googlesource.com/platform/dalvik/+/tools_r21/vm/Dalvik.h
-			includes Object.h
-				https://android.googlesource.com/platform/dalvik/+/6d874d2bda563ada1034d2b3219b35d800fc6860/vm/oo/Object.h
-				struct method
-					https://android.googlesource.com/platform/dalvik/+/6d874d2bda563ada1034d2b3219b35d800fc6860/vm/oo/Object.h#418
-					has nativeFunc field
+	Dalvik / art reflection
+		references for reflection
+	Object.getsnapshot()
+		when you get the snapshot, what are the values of the enviornmental var's? and at what time
+	dvmSetNativeFunc
+		where is it?
+	https://github.com/rovo89/Xposed/blob/6a8c2db5523377742a2c40fbd317b559e46b386f/libxposed_dalvik.cpp#L312
+		why are they using a memcpy?
 
+	We don't need to take the class as an argument because, in Dalvik, we don't need to worry about static synchronized methods.
+	https://android.googlesource.com/platform/dalvik/+/tools_r21/vm/interp/Stack.cpp#424
+ 		why?
+
+	can we rebuild / recompile the dalvik vm?
+		put a debug statement to see that every method hook goes through a native function dereference
+		https://android.googlesource.com/platform/dalvik/+/tools_r21/vm/interp/Stack.cpp#522
 
