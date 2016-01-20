@@ -2,46 +2,46 @@
 <items version="2" >
 
     <item
+        jar="/Users/dwu/AndroidEagleEye/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
+        <dex dex="/Users/dwu/AndroidEagleEye/app/build/intermediates/pre-dexed/debug/classes-97da709b109ed8ecae080cb0306d5addd939937b.jar" />
+    </item>
+    <item
+        jar="/Users/dwu/AndroidEagleEye/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
+        <dex dex="/Users/dwu/AndroidEagleEye/app/build/intermediates/pre-dexed/debug/classes-bfb5df940c23db571adcddd9bd8eaa43f623cc94.jar" />
+    </item>
+    <item
         jar="/Users/dwu/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.1/support-annotations-23.1.1.jar"
         jumboMode="false"
         revision="23.0.2"
         sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
-        <dex dex="/Users/dwu/AndroidStudioProjects/MyXposedModule/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.1-70b398f219440026e04b26afb97bf805129eb6ce.jar" />
+        <dex dex="/Users/dwu/AndroidEagleEye/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.1-70b398f219440026e04b26afb97bf805129eb6ce.jar" />
     </item>
     <item
-        jar="/Users/dwu/AndroidStudioProjects/MyXposedModule/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
-        <dex dex="/Users/dwu/AndroidStudioProjects/MyXposedModule/app/build/intermediates/pre-dexed/debug/classes-049e18ba13c1146f372eda25b8b60c89efb74d46.jar" />
-    </item>
-    <item
-        jar="/Users/dwu/AndroidStudioProjects/MyXposedModule/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
-        <dex dex="/Users/dwu/AndroidStudioProjects/MyXposedModule/app/build/intermediates/pre-dexed/debug/classes-c56613bbdd8375df74f9fc11f9c0eb963528e6e2.jar" />
-    </item>
-    <item
-        jar="/Users/dwu/AndroidStudioProjects/MyXposedModule/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
-        <dex dex="/Users/dwu/AndroidStudioProjects/MyXposedModule/app/build/intermediates/pre-dexed/debug/classes-0668c6645b7e1a24f67ff1c243bee30008169a29.jar" />
-    </item>
-    <item
-        jar="/Users/dwu/AndroidStudioProjects/MyXposedModule/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
-        <dex dex="/Users/dwu/AndroidStudioProjects/MyXposedModule/app/build/intermediates/pre-dexed/debug/classes-6f3d7a6225c85f8882cf0c8d0fd9ab47fd445bff.jar" />
-    </item>
-    <item
-        jar="/Users/dwu/AndroidStudioProjects/MyXposedModule/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/libs/internal_impl-23.1.1.jar"
+        jar="/Users/dwu/AndroidEagleEye/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/libs/internal_impl-23.1.1.jar"
         jumboMode="false"
         revision="23.0.2"
         sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
-        <dex dex="/Users/dwu/AndroidStudioProjects/MyXposedModule/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.1-4b5da8255fd369b7a47d109cf5f84cad0df90671.jar" />
+        <dex dex="/Users/dwu/AndroidEagleEye/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.1-55622fdfe13058d304153d7eca8e9dddf204cfe4.jar" />
+    </item>
+    <item
+        jar="/Users/dwu/AndroidEagleEye/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="/Users/dwu/AndroidEagleEye/app/build/intermediates/pre-dexed/debug/classes-f242053252ec4cd0c381a1ddec099a0d8da766de.jar" />
+    </item>
+    <item
+        jar="/Users/dwu/AndroidEagleEye/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="/Users/dwu/AndroidEagleEye/app/build/intermediates/pre-dexed/debug/classes-5df71a19230b6ff3ccae3ef9a411f30505a3e157.jar" />
     </item>
 
 </items>

@@ -1,0 +1,29 @@
+Questions
+	Dalvik / art reflection
+		references for reflection
+	Object.getsnapshot()
+		when you get the snapshot, what are the values of the enviornmental var's? and at what time
+	dvmSetNativeFunc
+		where is it?
+	https://github.com/rovo89/Xposed/blob/6a8c2db5523377742a2c40fbd317b559e46b386f/libxposed_dalvik.cpp#L312
+		why are they using a memcpy?
+
+	We don't need to take the class as an argument because, in Dalvik, we don't need to worry about static synchronized methods.
+	https://android.googlesource.com/platform/dalvik/+/tools_r21/vm/interp/Stack.cpp#424
+ 		why?
+
+	can we rebuild / recompile the dalvik vm?
+		put a debug statement to see that every method hook goes through a native function dereference
+		https://android.googlesource.com/platform/dalvik/+/tools_r21/vm/interp/Stack.cpp#522
+
+
+
+    milestones:
+
+    log hooking system
+        1. API level (binder api level)
+        2. VM level (dalvik code hook)
+            print out context (env vars, who is talking to who, what's in the message)
+
+    develop filtering language
+        how do we filter?

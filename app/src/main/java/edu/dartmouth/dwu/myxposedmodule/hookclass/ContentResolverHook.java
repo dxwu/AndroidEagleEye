@@ -14,7 +14,7 @@ import android.util.Log;
 import android.net.Uri;
 import android.content.ContentValues;
 
-public class ContentResolverHook extends MethodHook {
+public class   ContentResolverHook extends MethodHook {
 	private Methods mMethod = null;
 	private static final String mClassName = "android.content.ContentResolver";
 	

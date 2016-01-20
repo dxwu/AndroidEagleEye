@@ -29,15 +29,49 @@ See log info:
 
 
 
-can you change data?
-try asm
-
-
 Developing xposed modules
 https://github.com/rovo89/XposedBridge/wiki/Development-tutorial
 ** with the jar: 
 	don't put in libs/ dir, put in root dir
-	right click -> add library
+	right click -> add as library
 	android studio -> build -> edit libraries and dependencies -> app -> dependencies (top bar) -> jar -> scopt -> change to provided
 ** with the assets folder
 	gradle expects it to be in app/src/main/assets
+
+
+
+Google Nexus 7 2013 Wifi (flo)
+
+root
+    http://forum.xda-developers.com/showthread.php?t=2382051
+
+    download CF-root, extract, chmod +x root-mac.sh
+        http://download.chainfire.eu/347/CF-Root/CF-Auto-Root/CF-Auto-Root-flo-razor-nexus7.zip?retrieve_file=1
+    download adb, fastboot
+    enable usb debugging
+
+    adb reboot bootloader
+    fastboot oem unlock
+    confirm yes
+    press power button to select start
+
+    wait for device to reboot
+    enable usb debugging again
+    go into bootloader: adb reboot bootloader
+    ./root-mac.sh
+
+To flash custom recovery:
+	fastboot oem unlock
+	enable usb debugging
+	adb reboot bootloader
+	fastboot flash recovery recoveryfile.img
+		for nexus 7, make sure it's ending in "flo"
+		**** Because these nexus 7's were shipped with android 5.0 lollipop, and twrp original image was made for kit kat (4.4),
+			the regular recovery images won't work. Get the multirom TWRP for flo and flash that instead
+			http://forum.xda-developers.com/nexus-7-2013/nexus-7-2013-qa/mount-recovery-t3064562
+	once it shows that it's flashed in term, use power and volume buttons in bootloader page to go to "recovery"
+
+	If you want to install a zip, go into advanced, sideload with adb
+	I unchecked "inject multirom after installation"
+	in term, adb sideload xposed.zip
+	then after you reboot, adb install xposed_installer.apk (make sure you uninstall any prev versions first)
