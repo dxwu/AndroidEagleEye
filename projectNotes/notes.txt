@@ -71,6 +71,8 @@ To flash custom recovery:
 			http://forum.xda-developers.com/nexus-7-2013/nexus-7-2013-qa/mount-recovery-t3064562
 	once it shows that it's flashed in term, use power and volume buttons in bootloader page to go to "recovery"
 
+Installed Xposed for ART:
+	http://forum.xda-developers.com/showthread.php?t=3034811
 	If you want to install a zip, go into advanced, sideload with adb
 	I unchecked "inject multirom after installation"
 	in term, adb sideload xposed.zip
