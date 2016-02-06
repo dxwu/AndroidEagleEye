@@ -1,12 +1,13 @@
 package edu.dartmouth.dwu.myxposedmodule;
 
 
-import static de.robv.android.xposed.XposedHelpers.findClass;
-
-import edu.dartmouth.dwu.myxposedmodule.MethodParser;
-import edu.dartmouth.dwu.myxposedmodule.NativeEntry;
-import edu.dartmouth.dwu.myxposedmodule.Util;
-import edu.dartmouth.dwu.myxposedmodule.hookclass.*;
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.pm.ApplicationInfo;
+import android.os.Binder;
+import android.os.Build;
+import android.os.Process;
+import android.util.Log;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -24,14 +25,6 @@ import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import android.annotation.SuppressLint;
-import android.content.Context;
-import android.content.pm.ApplicationInfo;
-import android.os.Binder;
-import android.os.Build;
-import android.os.Process;
-import android.text.TextUtils;
-import android.util.Log;
 import de.robv.android.xposed.IXposedHookLoadPackage;
 import de.robv.android.xposed.IXposedHookZygoteInit;
 import de.robv.android.xposed.XC_MethodHook;
@@ -40,6 +33,48 @@ import de.robv.android.xposed.XposedBridge;
 import de.robv.android.xposed.XposedHelpers;
 import de.robv.android.xposed.XposedHelpers.ClassNotFoundError;
 import de.robv.android.xposed.callbacks.XC_LoadPackage.LoadPackageParam;
+import edu.dartmouth.dwu.myxposedmodule.hookclass.AbstractHttpClientHook;
+import edu.dartmouth.dwu.myxposedmodule.hookclass.AccountManagerHook;
+import edu.dartmouth.dwu.myxposedmodule.hookclass.ActivityHook;
+import edu.dartmouth.dwu.myxposedmodule.hookclass.ActivityManagerHook;
+import edu.dartmouth.dwu.myxposedmodule.hookclass.ActivityThreadHook;
+import edu.dartmouth.dwu.myxposedmodule.hookclass.ApplicationHook;
+import edu.dartmouth.dwu.myxposedmodule.hookclass.ApplicationPackageManagerHook;
+import edu.dartmouth.dwu.myxposedmodule.hookclass.AudioRecordHook;
+import edu.dartmouth.dwu.myxposedmodule.hookclass.BaseDexClassLoaderHook;
+import edu.dartmouth.dwu.myxposedmodule.hookclass.BluetoothAdapterHook;
+import edu.dartmouth.dwu.myxposedmodule.hookclass.BluetoothSocketHook;
+import edu.dartmouth.dwu.myxposedmodule.hookclass.BroadcastReceiverHook;
+import edu.dartmouth.dwu.myxposedmodule.hookclass.CameraHook;
+import edu.dartmouth.dwu.myxposedmodule.hookclass.CipherHook;
+import edu.dartmouth.dwu.myxposedmodule.hookclass.ClassLoaderHook;
+import edu.dartmouth.dwu.myxposedmodule.hookclass.ConnectivityManagerHook;
+import edu.dartmouth.dwu.myxposedmodule.hookclass.ContentResolverHook;
+import edu.dartmouth.dwu.myxposedmodule.hookclass.ContextImplHook;
+import edu.dartmouth.dwu.myxposedmodule.hookclass.FileHook;
+import edu.dartmouth.dwu.myxposedmodule.hookclass.InetAddressHook;
+import edu.dartmouth.dwu.myxposedmodule.hookclass.InstrumentationHook;
+import edu.dartmouth.dwu.myxposedmodule.hookclass.IoBridgeHook;
+import edu.dartmouth.dwu.myxposedmodule.hookclass.LocationManagerHook;
+import edu.dartmouth.dwu.myxposedmodule.hookclass.MediaRecorderHook;
+import edu.dartmouth.dwu.myxposedmodule.hookclass.MethodHook;
+import edu.dartmouth.dwu.myxposedmodule.hookclass.NetworkInterfaceHook;
+import edu.dartmouth.dwu.myxposedmodule.hookclass.NotificationManagerHook;
+import edu.dartmouth.dwu.myxposedmodule.hookclass.PackageManagerHook;
+import edu.dartmouth.dwu.myxposedmodule.hookclass.PowerManagerHook;
+import edu.dartmouth.dwu.myxposedmodule.hookclass.ProcessBuilderHook;
+import edu.dartmouth.dwu.myxposedmodule.hookclass.ProcessHook;
+import edu.dartmouth.dwu.myxposedmodule.hookclass.RuntimeHook;
+import edu.dartmouth.dwu.myxposedmodule.hookclass.SecretKeySpecHook;
+import edu.dartmouth.dwu.myxposedmodule.hookclass.SettingsSecureHook;
+import edu.dartmouth.dwu.myxposedmodule.hookclass.SmsManagerHook;
+import edu.dartmouth.dwu.myxposedmodule.hookclass.SystemPropertiesHook;
+import edu.dartmouth.dwu.myxposedmodule.hookclass.TelephonyManagerHook;
+import edu.dartmouth.dwu.myxposedmodule.hookclass.URLHook;
+import edu.dartmouth.dwu.myxposedmodule.hookclass.WebViewHook;
+import edu.dartmouth.dwu.myxposedmodule.hookclass.WifiManagerHook;
+
+import static de.robv.android.xposed.XposedHelpers.findClass;
 
 /**
  * Created by dwu on 11/15/15.

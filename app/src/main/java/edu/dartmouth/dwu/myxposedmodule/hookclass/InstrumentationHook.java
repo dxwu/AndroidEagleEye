@@ -1,11 +1,14 @@
 package edu.dartmouth.dwu.myxposedmodule.hookclass;
 
+import android.os.Binder;
+import android.util.Log;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import android.os.Binder;
-
 import de.robv.android.xposed.XC_MethodHook.MethodHookParam;
+import edu.dartmouth.dwu.myxposedmodule.MethodParser;
+import edu.dartmouth.dwu.myxposedmodule.Util;
 
 public class InstrumentationHook extends MethodHook {
 	private Methods mMethod = null;
@@ -36,6 +39,22 @@ public class InstrumentationHook extends MethodHook {
 		methodHookList.add(new InstrumentationHook(Methods.execStartActivity));
 
 		return methodHookList;
+	}
+
+	public void before(MethodHookParam param) throws Throwable {
+		if (mMethod == Methods.execStartActivity) {
+			Log.i(Util.LOG_TAG, "\n\n***We got something here!\n");
+
+			String[] argNamesArray = {"who", "contextThread", "token", "target", "intent", "requestCode", "options"};
+			String formattedArgs = MethodParser.parseMethodArgs(param, argNamesArray);
+			Log.i(Util.LOG_TAG, "FormattedArgs: " + formattedArgs + "\n");
+
+			if (formattedArgs.contains("intent") && formattedArgs.contains("act=android.media.action.IMAGE_CAPTURE")) {
+				Log.i(Util.LOG_TAG, param.args[0].toString() + " requested an image capture!!!\n");
+				// block method call
+				param.setResult(null);
+			}
+		}
 	}
 	
 	@Override

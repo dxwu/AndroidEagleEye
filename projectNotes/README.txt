@@ -1,6 +1,9 @@
-Google nexus 4
+Installing and Working with Xposed
+David Wu
 
-root
+Most instructions are from https://github.com/rovo89/XposedBridge/wiki/Development-tutorial
+
+make sure the phone is rooted
 
 install xposed installer
 	http://repo.xposed.info/module/de.robv.android.xposed.installer
@@ -28,21 +31,26 @@ See log info:
 	adb logcat -s EagleEye:I
 
 
-
 Developing xposed modules
-https://github.com/rovo89/XposedBridge/wiki/Development-tutorial
-** with the jar: 
-	don't put in libs/ dir, put in root dir
-	right click -> add as library
-	android studio -> build -> edit libraries and dependencies -> app -> dependencies (top bar) -> jar -> scopt -> change to provided
-** with the assets folder
-	gradle expects it to be in app/src/main/assets
+
+	https://github.com/rovo89/XposedBridge/wiki/Development-tutorial
+	** with the jar: 
+		don't put in libs/ dir, put in root dir
+		right click -> add as library
+		android studio -> build -> edit libraries and dependencies -> app -> dependencies (top bar) -> jar -> scopt -> change to provided
+	** with the assets folder
+		gradle expects it to be in app/src/main/assets
 
 
+--------------------------------------------------------------
+--------------------------------------------------------------
 
-Google Nexus 7 2013 Wifi (flo)
 
-root
+Installing and Working with Xposed (ART) for Nexus 7 (2013)
+
+Google Nexus 7 2013 Wifi (flo) - Armv7-a 32 bit
+
+Root:
     http://forum.xda-developers.com/showthread.php?t=2382051
 
     download CF-root, extract, chmod +x root-mac.sh

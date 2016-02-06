@@ -1,0 +1,97 @@
+--------- beginning of /dev/log/system
+--------- beginning of /dev/log/main
+I/EagleEye(21462): 
+I/EagleEye(21462): 
+I/EagleEye(21462): ***We got something here!
+I/EagleEye(21462): FormattedArgs: "who":"com.android.launcher2.Launcher@420fbb48", "contextThread":"android.app.ActivityThread$ApplicationThread@420f3cf8", "token":"android.os.BinderProxy@420f5a68", "target":"com.android.launcher2.Launcher@420fbb48", "intent":"Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=edu.dartmouth.dwu.suspiciousapp/.MyActivity bnds=[392,385][552,585] }", "requestCode":"-1", "options":"Bundle[{android:animStartX=392, android:animStartY=385, android:animType=2, android:animStartWidth=160, android:packageName=com.android.launcher, android:animStartHeight=200}]"
+I/EagleEye(23047): {"Basic":["10090","0","false"], 
+I/EagleEye(23047): 
+I/EagleEye(23047): 	"InvokeApi":{"java.lang.Runtime->loadLibrary":{"library":"eagleeyenative", "loader":"dalvik.system.PathClassLoader[DexPathList[[zip file "/data/app/edu.dartmouth.dwu.myxposedmodule-2.apk"],nativeLibraryDirectories=[/vendor/lib, /system/lib]]]"}, "return":{"null":"null"}}}
+I/EagleEye(23047): 
+I/EagleEye(23047): 
+I/EagleEye(23047): ***We got something here!
+I/EagleEye(23047): FormattedArgs: "who":"edu.dartmouth.dwu.suspiciousapp.MyActivity@42119728", "contextThread":"android.app.ActivityThread$ApplicationThread@420f1530", "token":"android.os.BinderProxy@420f2ad8", "target":"edu.dartmouth.dwu.suspiciousapp.MyActivity@42119728", "intent":"Intent { act=android.media.action.IMAGE_CAPTURE }", "requestCode":"54321", "options":"null"
+I/EagleEye(23047): edu.dartmouth.dwu.suspiciousapp.MyActivity@42119728 requested an image capture!!!
+I/EagleEye(23047): {"Basic":["10090","0","false"], 
+I/EagleEye(23047): 
+I/EagleEye(23047): 	"InvokeApi":{"android.app.Instrumentation->execStartActivity":{"who":"edu.dartmouth.dwu.suspiciousapp.MyActivity@42119728", "contextThread":"android.app.ActivityThread$ApplicationThread@420f1530", "token":"android.os.BinderProxy@420f2ad8", "target":"edu.dartmouth.dwu.suspiciousapp.MyActivity@42119728", "intent":"Intent { act=android.media.action.IMAGE_CAPTURE }", "requestCode":"54321", "options":"null"}, "return":{"null":"null"}}}
+I/EagleEye(23047): 
+I/EagleEye(23047): 
+I/EagleEye(23047): ***We got something here!
+I/EagleEye(23047): FormattedArgs: "who":"edu.dartmouth.dwu.suspiciousapp.MyActivity@42119728", "contextThread":"android.app.ActivityThread$ApplicationThread@420f1530", "token":"android.os.BinderProxy@420f2ad8", "target":"edu.dartmouth.dwu.suspiciousapp.MyActivity@42119728", "intent":"Intent { act=android.media.action.IMAGE_CAPTURE }", "requestCode":"54321", "options":"null"
+I/EagleEye(23047): edu.dartmouth.dwu.suspiciousapp.MyActivity@42119728 requested an image capture!!!
+I/EagleEye(23047): {"Basic":["10090","0","false"], 
+I/EagleEye(23047): 
+I/EagleEye(23047): 	"InvokeApi":{"android.app.Instrumentation->execStartActivity":{"who":"edu.dartmouth.dwu.suspiciousapp.MyActivity@42119728", "contextThread":"android.app.ActivityThread$ApplicationThread@420f1530", "token":"android.os.BinderProxy@420f2ad8", "target":"edu.dartmouth.dwu.suspiciousapp.MyActivity@42119728", "intent":"Intent { act=android.media.action.IMAGE_CAPTURE }", "requestCode":"54321", "options":"null"}, "return":{"null":"null"}}}
+I/EagleEye(23047): 
+I/EagleEye(23047): 
+I/EagleEye(23047): ***We got something here!
+I/EagleEye(23047): FormattedArgs: "who":"edu.dartmouth.dwu.suspiciousapp.MyActivity@42119728", "contextThread":"android.app.ActivityThread$ApplicationThread@420f1530", "token":"android.os.BinderProxy@420f2ad8", "target":"edu.dartmouth.dwu.suspiciousapp.MyActivity@42119728", "intent":"Intent { act=android.media.action.IMAGE_CAPTURE }", "requestCode":"54321", "options":"null"
+I/EagleEye(23047): edu.dartmouth.dwu.suspiciousapp.MyActivity@42119728 requested an image capture!!!
+I/EagleEye(23047): {"Basic":["10090","0","false"], 
+I/EagleEye(23047): 
+I/EagleEye(23047): 	"InvokeApi":{"android.app.Instrumentation->execStartActivity":{"who":"edu.dartmouth.dwu.suspiciousapp.MyActivity@42119728", "contextThread":"android.app.ActivityThread$ApplicationThread@420f1530", "token":"android.os.BinderProxy@420f2ad8", "target":"edu.dartmouth.dwu.suspiciousapp.MyActivity@42119728", "intent":"Intent { act=android.media.action.IMAGE_CAPTURE }", "requestCode":"54321", "options":"null"}, "return":{"null":"null"}}}
+I/EagleEye(23047): 
+I/EagleEye(23047): 
+I/EagleEye(23047): ***We got something here!
+I/EagleEye(23047): FormattedArgs: "who":"edu.dartmouth.dwu.suspiciousapp.MyActivity@42119728", "contextThread":"android.app.ActivityThread$ApplicationThread@420f1530", "token":"android.os.BinderProxy@420f2ad8", "target":"edu.dartmouth.dwu.suspiciousapp.MyActivity@42119728", "intent":"Intent { act=android.media.action.IMAGE_CAPTURE }", "requestCode":"54321", "options":"null"
+I/EagleEye(23047): edu.dartmouth.dwu.suspiciousapp.MyActivity@42119728 requested an image capture!!!
+I/EagleEye(23047): {"Basic":["10090","0","false"], 
+I/EagleEye(23047): 
+I/EagleEye(23047): 	"InvokeApi":{"android.app.Instrumentation->execStartActivity":{"who":"edu.dartmouth.dwu.suspiciousapp.MyActivity@42119728", "contextThread":"android.app.ActivityThread$ApplicationThread@420f1530", "token":"android.os.BinderProxy@420f2ad8", "target":"edu.dartmouth.dwu.suspiciousapp.MyActivity@42119728", "intent":"Intent { act=android.media.action.IMAGE_CAPTURE }", "requestCode":"54321", "options":"null"}, "return":{"null":"null"}}}
+I/EagleEye(23047): 
+I/EagleEye(23047): 
+I/EagleEye(23047): ***We got something here!
+I/EagleEye(23047): FormattedArgs: "who":"edu.dartmouth.dwu.suspiciousapp.MyActivity@42119728", "contextThread":"android.app.ActivityThread$ApplicationThread@420f1530", "token":"android.os.BinderProxy@420f2ad8", "target":"edu.dartmouth.dwu.suspiciousapp.MyActivity@42119728", "intent":"Intent { act=android.media.action.IMAGE_CAPTURE }", "requestCode":"54321", "options":"null"
+I/EagleEye(23047): edu.dartmouth.dwu.suspiciousapp.MyActivity@42119728 requested an image capture!!!
+I/EagleEye(23047): {"Basic":["10090","0","false"], 
+I/EagleEye(23047): 
+I/EagleEye(23047): 	"InvokeApi":{"android.app.Instrumentation->execStartActivity":{"who":"edu.dartmouth.dwu.suspiciousapp.MyActivity@42119728", "contextThread":"android.app.ActivityThread$ApplicationThread@420f1530", "token":"android.os.BinderProxy@420f2ad8", "target":"edu.dartmouth.dwu.suspiciousapp.MyActivity@42119728", "intent":"Intent { act=android.media.action.IMAGE_CAPTURE }", "requestCode":"54321", "options":"null"}, "return":{"null":"null"}}}
+I/EagleEye(23047): 
+I/EagleEye(23047): 
+I/EagleEye(23047): ***We got something here!
+I/EagleEye(23047): FormattedArgs: "who":"edu.dartmouth.dwu.suspiciousapp.MyActivity@42119728", "contextThread":"android.app.ActivityThread$ApplicationThread@420f1530", "token":"android.os.BinderProxy@420f2ad8", "target":"edu.dartmouth.dwu.suspiciousapp.MyActivity@42119728", "intent":"Intent { act=android.media.action.IMAGE_CAPTURE }", "requestCode":"54321", "options":"null"
+I/EagleEye(23047): edu.dartmouth.dwu.suspiciousapp.MyActivity@42119728 requested an image capture!!!
+I/EagleEye(23047): {"Basic":["10090","0","false"], 
+I/EagleEye(23047): 
+I/EagleEye(23047): 	"InvokeApi":{"android.app.Instrumentation->execStartActivity":{"who":"edu.dartmouth.dwu.suspiciousapp.MyActivity@42119728", "contextThread":"android.app.ActivityThread$ApplicationThread@420f1530", "token":"android.os.BinderProxy@420f2ad8", "target":"edu.dartmouth.dwu.suspiciousapp.MyActivity@42119728", "intent":"Intent { act=android.media.action.IMAGE_CAPTURE }", "requestCode":"54321", "options":"null"}, "return":{"null":"null"}}}
+I/EagleEye(23047): 
+I/EagleEye(23047): 
+I/EagleEye(23047): ***We got something here!
+I/EagleEye(23047): FormattedArgs: "who":"edu.dartmouth.dwu.suspiciousapp.MyActivity@42119728", "contextThread":"android.app.ActivityThread$ApplicationThread@420f1530", "token":"android.os.BinderProxy@420f2ad8", "target":"edu.dartmouth.dwu.suspiciousapp.MyActivity@42119728", "intent":"Intent { act=android.media.action.IMAGE_CAPTURE }", "requestCode":"54321", "options":"null"
+I/EagleEye(23047): edu.dartmouth.dwu.suspiciousapp.MyActivity@42119728 requested an image capture!!!
+I/EagleEye(23047): {"Basic":["10090","0","false"], 
+I/EagleEye(23047): 
+I/EagleEye(23047): 	"InvokeApi":{"android.app.Instrumentation->execStartActivity":{"who":"edu.dartmouth.dwu.suspiciousapp.MyActivity@42119728", "contextThread":"android.app.ActivityThread$ApplicationThread@420f1530", "token":"android.os.BinderProxy@420f2ad8", "target":"edu.dartmouth.dwu.suspiciousapp.MyActivity@42119728", "intent":"Intent { act=android.media.action.IMAGE_CAPTURE }", "requestCode":"54321", "options":"null"}, "return":{"null":"null"}}}
+I/EagleEye(23047): 
+I/EagleEye(23047): 
+I/EagleEye(23047): ***We got something here!
+I/EagleEye(23047): FormattedArgs: "who":"edu.dartmouth.dwu.suspiciousapp.MyActivity@42119728", "contextThread":"android.app.ActivityThread$ApplicationThread@420f1530", "token":"android.os.BinderProxy@420f2ad8", "target":"edu.dartmouth.dwu.suspiciousapp.MyActivity@42119728", "intent":"Intent { act=android.media.action.IMAGE_CAPTURE }", "requestCode":"54321", "options":"null"
+I/EagleEye(23047): edu.dartmouth.dwu.suspiciousapp.MyActivity@42119728 requested an image capture!!!
+I/EagleEye(23047): {"Basic":["10090","0","false"], 
+I/EagleEye(23047): 
+I/EagleEye(23047): 	"InvokeApi":{"android.app.Instrumentation->execStartActivity":{"who":"edu.dartmouth.dwu.suspiciousapp.MyActivity@42119728", "contextThread":"android.app.ActivityThread$ApplicationThread@420f1530", "token":"android.os.BinderProxy@420f2ad8", "target":"edu.dartmouth.dwu.suspiciousapp.MyActivity@42119728", "intent":"Intent { act=android.media.action.IMAGE_CAPTURE }", "requestCode":"54321", "options":"null"}, "return":{"null":"null"}}}
+I/EagleEye(23047): 
+I/EagleEye(23047): 
+I/EagleEye(23047): ***We got something here!
+I/EagleEye(23047): FormattedArgs: "who":"edu.dartmouth.dwu.suspiciousapp.MyActivity@42119728", "contextThread":"android.app.ActivityThread$ApplicationThread@420f1530", "token":"android.os.BinderProxy@420f2ad8", "target":"edu.dartmouth.dwu.suspiciousapp.MyActivity@42119728", "intent":"Intent { act=android.media.action.IMAGE_CAPTURE }", "requestCode":"54321", "options":"null"
+I/EagleEye(23047): edu.dartmouth.dwu.suspiciousapp.MyActivity@42119728 requested an image capture!!!
+I/EagleEye(23047): {"Basic":["10090","0","false"], 
+I/EagleEye(23047): 
+I/EagleEye(23047): 	"InvokeApi":{"android.app.Instrumentation->execStartActivity":{"who":"edu.dartmouth.dwu.suspiciousapp.MyActivity@42119728", "contextThread":"android.app.ActivityThread$ApplicationThread@420f1530", "token":"android.os.BinderProxy@420f2ad8", "target":"edu.dartmouth.dwu.suspiciousapp.MyActivity@42119728", "intent":"Intent { act=android.media.action.IMAGE_CAPTURE }", "requestCode":"54321", "options":"null"}, "return":{"null":"null"}}}
+I/EagleEye(23047): 
+I/EagleEye(23047): 
+I/EagleEye(23047): ***We got something here!
+I/EagleEye(23047): FormattedArgs: "who":"edu.dartmouth.dwu.suspiciousapp.MyActivity@42119728", "contextThread":"android.app.ActivityThread$ApplicationThread@420f1530", "token":"android.os.BinderProxy@420f2ad8", "target":"edu.dartmouth.dwu.suspiciousapp.MyActivity@42119728", "intent":"Intent { act=android.media.action.IMAGE_CAPTURE }", "requestCode":"54321", "options":"null"
+I/EagleEye(23047): edu.dartmouth.dwu.suspiciousapp.MyActivity@42119728 requested an image capture!!!
+I/EagleEye(23047): {"Basic":["10090","0","false"], 
+I/EagleEye(23047): 
+I/EagleEye(23047): 	"InvokeApi":{"android.app.Instrumentation->execStartActivity":{"who":"edu.dartmouth.dwu.suspiciousapp.MyActivity@42119728", "contextThread":"android.app.ActivityThread$ApplicationThread@420f1530", "token":"android.os.BinderProxy@420f2ad8", "target":"edu.dartmouth.dwu.suspiciousapp.MyActivity@42119728", "intent":"Intent { act=android.media.action.IMAGE_CAPTURE }", "requestCode":"54321", "options":"null"}, "return":{"null":"null"}}}
+I/EagleEye(23047): 
+I/EagleEye(23047): 
+I/EagleEye(23047): ***We got something here!
+I/EagleEye(23047): FormattedArgs: "who":"edu.dartmouth.dwu.suspiciousapp.MyActivity@42119728", "contextThread":"android.app.ActivityThread$ApplicationThread@420f1530", "token":"android.os.BinderProxy@420f2ad8", "target":"edu.dartmouth.dwu.suspiciousapp.MyActivity@42119728", "intent":"Intent { act=android.media.action.IMAGE_CAPTURE }", "requestCode":"54321", "options":"null"
+I/EagleEye(23047): edu.dartmouth.dwu.suspiciousapp.MyActivity@42119728 requested an image capture!!!
+I/EagleEye(23047): {"Basic":["10090","0","false"], 
+I/EagleEye(23047): 
+I/EagleEye(23047): 	"InvokeApi":{"android.app.Instrumentation->execStartActivity":{"who":"edu.dartmouth.dwu.suspiciousapp.MyActivity@42119728", "contextThread":"android.app.ActivityThread$ApplicationThread@420f1530", "token":"android.os.BinderProxy@420f2ad8", "target":"edu.dartmouth.dwu.suspiciousapp.MyActivity@42119728", "intent":"Intent { act=android.media.action.IMAGE_CAPTURE }", "requestCode":"54321", "options":"null"}, "return":{"null":"null"}}}
