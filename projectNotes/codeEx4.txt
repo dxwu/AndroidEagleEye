@@ -1,0 +1,68 @@
+Code execution path from Android Java API to linux kernel driver
+	tracing the path of a Binder transaction
+
+Sources:
+	AOSP: https://android.googlesource.com/
+	binder linux driver: https://android.googlesource.com/kernel/common.git/+/android-3.4/drivers/staging/android
+
+Android API
+	Context.registerReceiver()
+		ContextWrapper -> ContextImpl.registerReceiverInternal()
+			ActivityManagerNative.getDefault().registerReceiver() (line 2998)
+				android.os.BinderProxy->transact()
+					native transactNative()
+
+AOSP/frameworks/base/core/jni/android_util_Binder.cpp
+	implements the native JNI function android_os_BinderProxy_transact()
+		(mapping is in gBinderProxyMethods[])
+		calls IBinder* target->transact()
+			** at this point, the class that implements IBinder that is on the other side of the transaction will have their transact() called
+			** BBinder, BpBinder, and custom classes that implement IBinder can have their transact() called
+
+			AOSP/frameworks/native/include/binder/BpBinder.h 
+				BpBinder implements IBinder
+					AOSP/frameworks/native/libs/binder/BpBinder.cpp
+						BpBinder::transact() calls IPCThreadState::self()->transact()
+							AOSP/frameworks/native/libs/binder/IPCThreadState.cpp
+								transact() calls waitForResponse() calls talkWithDriver()
+									calls ioctl(mProcess->mDriverFD, BINDER_WRITE_READ, &bwr)
+
+										/Volumes/untitled/AOSP/bionic/libc/bionic/ioctl.c
+											/Volumes/untitled/AOSP/bionic/libc/arch-arm/syscalls/__ioctl.S
+												ldr     r7, =__NR_ioctl
+    											swi     #0
+
+msm/drivers/staging/android/binder.c is a linux driver
+	calls device_initcall(binder_init);
+		binder_init() calls misc_register(&binder_miscdev)
+			registers file operations and driver name
+				static struct miscdevice binder_miscdev = {
+					.minor = MISC_DYNAMIC_MINOR,
+					.name = "binder",
+					.fops = &binder_fops
+				};
+
+				static const struct file_operations binder_fops = {
+					.owner = THIS_MODULE,
+					.poll = binder_poll,
+					.unlocked_ioctl = binder_ioctl,
+					.mmap = binder_mmap,
+					.open = binder_open,
+					.flush = binder_flush,
+					.release = binder_release,
+				};
+
+/Volumes/untitled/AOSP/frameworks/native/libs/binder/{ProcessState.cpp,IPCThreadState.cpp}
+	BpBinder::transact() calls IPCThreadState::self()->transact()
+		IPCThreadState::self() calls ProcessState::self()
+			ProcessState::self() calls open_driver()
+				calls open("/dev/binder", O_RDWR);
+
+
+
+
+how is the binder linux kernel module compiled into the kernel?
+	msm/android/configs/android-base.cfg sets CONFIG_ANDROID_BINDER_IPC=y
+	drivers/staging/android/Makefile compiles binder.c into binder.o if that var is true
+	android /system/libs/libbinder.so is compiled from 
+		http://androidxref.com/6.0.1_r10/xref/frameworks/native/libs/binder/Android.mk#44
