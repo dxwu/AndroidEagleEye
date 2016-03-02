@@ -1,0 +1,94 @@
+Binder transaction in the linux kernel driver
+
+
+Context Manager setup:
+
+a. servicemanager (Context Manager) service is started from init 
+b. /Volumes/untitled/AOSP/frameworks/native/cmds/servicemanager/service_manager.c 
+   /Volumes/untitled/AOSP/frameworks/native/cmds/servicemanager/binder.c
+	main() calls binder_open() to open a file descripter to the binder linux driver
+		   calls binder_become_context_manager() to become the context manager
+		   		calls ioctl(bs->fd, BINDER_SET_CONTEXT_MGR, 0) which goes into the linux driver
+		   		binder_ioctl() in linux driver (binder_ioctl():2771) creates a new node in the rb tree
+		   			(Global binder_node*) binder_context_mgr_node = binder_new_node(proc, NULL, NULL);
+c. servicemanager's main() calls binder_loop() to register its own binder threads to listen for 
+   	when other android services want to register themselves with servicemanager
+   	when other android clients want to ask for services registered with servicemanager
+   		calls first binder_write() -> calls ioctl(BINDER_WRITE_READ) to register first listening thread
+   		when a service registers with servicemanager, the ioctl above will return, and servicemanager->binder_loop() will enter the for (;;) loop
+   			in the for(;;) loop, servicemanager will start off another thread to listen for other services wanting to register,
+   			and call binder_parse() to parse the incoming request (BR_TRANSACTION)
+   				case BR_TRANSACTION calls func(bs, txn, &msg, &reply) 
+   					where func = servicemanager.c:svcmgr_handler()  // service_manager.c:main() called binder_loop(bs, svcmgr_handler);
+   						svcmgr_handler() switches on the transaction code to handle client vs. server requests
+   							case client request (GET/CHECK_SERVICE): 
+   								handle = do_find_service()
+   								bio_put_ref(reply, handle)
+   							case server request (ADD_SERVICE):
+   								handle = bio_get_ref(msg)
+   								do_add_service()
+                case BR_TRANSACTION calls binder_send_reply(bs, &reply, txn->data.ptr.buffer, res);
+                	calls binder_write() calls ioctl(BINDER_WRITE_READ) to respond to client/service request
+
+
+Client A calls Service B's function (i.e. A calls B.foo(someBar))
+
+(0. Service B registers itself with the Context Manager) // if it's a popular system service
+1. Service B starts threads waiting for binder requests 
+	calls IPCThreadState::joinThreadPool()
+		calls IPCThreadState::getAndExecuteCommand()
+			->IPCThreadState::talkWithDriver()
+				-> binder.c:ioctl(BINDER_WRITE_READ) 
+					-> Thread gets blocked here (IPCThreadState.cpp:856)
+2. binder driver blocks Service B's thread on ioctl until someone sends a binder request to the thread
+	binder_ioctl() calls wait_event_interruptable() on the thread
+		copies transaction data from userland to kernel
+			calls binder_thread_read()
+				calls wait_event_freezable(thread->wait, binder_has_thread_work(thread))
+				loops in the kernel until there is a incoming transaction?
+
+(3. Client A requests service from the Context Manager) // if it's a popular system service
+4. Client A calls B's function
+5. Client A 
+	calls IPCThreadState::transact() 
+		-> IPCThreadState::waitForResponse() 
+			->IPCThreadState::talkWithDriver()
+				-> binder.c:ioctl(BINDER_WRITE_READ) 
+					-> Thread gets blocked here (IPCThreadState.cpp:856)
+6. binder_ioctl() copies transaction data from userland to kernel
+		calls binder_thread_write()
+			calls binder_transaction()
+				gets the target thread, flips read/write fields, 
+				adds transaction data to list
+					(binder_transaction) t->work.type = BINDER_WORK_TRANSACTION;
+					list_add_tail(&t->work.entry, target_list);
+					wakes up target thread, i.e. Service B's thread 
+	binder_ioctl() copies stats about the read/write back to userland
+
+7. Service B's thread binder_thread_read() continues 
+	gets transaction data Client B
+		w = list_first_entry(&thread->todo, struct binder_work, entry);
+		(binder_transaction) t = container_of(w, struct binder_transaction, work);
+	sets read/write fields 
+	calls copy_to_user() to transfer Client A's transation data to Service B's address space
+		(data is from Client A and Server B's thread is calling this binder_thread_read())
+8. Service B's thread binder_thread_read() returns to binder_ioctl()
+		wakes up B's thread: wake_up_interruptible(&proc->wait)
+		copies read data stats to B's thread
+9. Service B's thread that was waiting for binder requests can now service the request
+		thread wakes up at IPCThreadState.cpp:856
+		parcel marshalls the request
+
+10. Service B's ioctl() in IPCThreadState::talkWithDriver() returns command (i.e. BR_TRANSACTION)
+		IPCThreadState::getAndExecuteCommand() calls executeCommand(BR_TRANSACTION)
+			executeCommand() gets Client B's info, then calls transact() with the reply
+				repeat steps 5 & 6
+
+13. Client is woken up with the reply, i.e. the result of B's function
+
+
+
+
+
+
+
