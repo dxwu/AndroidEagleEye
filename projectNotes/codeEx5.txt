@@ -44,8 +44,9 @@ Client A calls Service B's function (i.e. A calls B.foo(someBar))
 	binder_ioctl() calls wait_event_interruptable() on the thread
 		copies transaction data from userland to kernel
 			calls binder_thread_read()
-				calls wait_event_freezable(thread->wait, binder_has_thread_work(thread))
-				loops in the kernel until there is a incoming transaction?
+				calls wait_event_freezable(thread->wait, binder_has_thread_work(thread)) to send the thread to sleep
+				loops in the kernel until there is a incoming transaction
+					loop back to the "retry" goto on BINDER_LOOPER_STATE_NEED_RETURN and wait_for_proc_work flags
 
 (3. Client A requests service from the Context Manager) // if it's a popular system service
 4. Client A calls B's function
